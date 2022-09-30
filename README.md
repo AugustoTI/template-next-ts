@@ -1,4 +1,4 @@
-# Typescript + Prettier + ESlint
+# Typescript + Prettier + ESlint + Axios
 
 ### **Prettier**
 
@@ -22,7 +22,13 @@ you about some things related to accessibility, better ways of writing and etc..
 
 > If you want to add or disable any rules, feel free.
 
-### Installing 👨‍💻
+### **Axios**
+
+It is an "improvement" of the browser's Fetch API. It brings more facilities for you to
+handle HTTP requests and much more. I recommend reading the
+[Documentation of Axios](https://axios-http.com/docs/intro).
+
+## Installing 👨‍💻
 
 To run the template, open the terminal in the repository you want and run in your terminal
 
