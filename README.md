@@ -1,6 +1,6 @@
 # Welcome to my NextJS + Typescript + Jest template 🚀
 
-## Lista de tecnologias incorporadas:
+## List of built-in technologies:
 
 - Prettier
 - ESLint
@@ -11,14 +11,13 @@
 - Axios
 - Testing Library
 
-## Pequena descrição de cada uma:
+## Short description of each:
 
 ### Prettier
 
-Um formatador de códigos para deixar seu código mais legível e padronizado.
+A code formatter to make your code more readable and standardized.
 
-**OBS:** Se você possui a extensão do Prettier instalada no seu Vistual Studio Code, crie
-uma pasta chamada `.vscode` ( caso ainda não tenha ) e coloque o seguinte código:
+**NOTE:** If you have the Prettier extension installed in your Visual Studio Code, create a folder called `.vscode` (if you don't already have it) and put the following code:
 
 ```json
 {
@@ -26,54 +25,52 @@ uma pasta chamada `.vscode` ( caso ainda não tenha ) e coloque o seguinte códi
 }
 ```
 
-[Leia a documentação](https://prettier.io/docs/en/index.html)
+[Read the documentation](https://prettier.io/docs/en/index.html)
 
 ### ESLint
 
-Vai analisar seu código para **evitar bugs e erros**. Tem integração com React, Prettier e
-as mais diversas tecnologias.
+Will analyze your code to **avoid bugs and errors**.  Has integration with React, Prettier and the most diverse technologies.
 
-[Leia a documentação](https://eslint.org/)
+[Read the documentation](https://eslint.org/)
 
 ### Jest
 
-É um framework para criação de **testes unitários** do seu código. Garante melhor
-qualidade no código escrito e poupa seu tempo. Inicialmente pensando para rodar no NodeJS,
-mas atualmente, também é possível realizar testes para o Browser
+It's a framework for creating **unit tests** of your code.  best guarantee
+quality in written code and saves your time.  Initially thinking to run on NodeJS,
+but currently, it is also possible to perform tests for the Browser
 
-[Leia a documentação](https://jestjs.io/)
+[Read the documentation](https://jestjs.io/)
 
 ### Axios
 
-Uma versão melhorada da Fetch API. Entrega varias facilidades para fazer requisição e
-funciona tanto no Servidor, quanto no Navegador.
+An improved version of the Fetch API.  Provides various facilities to make requests and
+works both on Server and Browser.
 
-[Leia a documentação](https://axios-http.com/docs/intro)
+[Read the documentation](https://axios-http.com/docs/intro)
 
 ### Typescript
 
-Uma versão melhorada do nosso bom e velho Javascript. Adiciona a possibilidade de tipagem
-estática e outros recursos que normalmente, não chegaram ou existem no Javascript
-tradicional.
+An improved version of our good old Javascript.  Adds the possibility of typing
+static and other features that normally don't arrive or exist in Javascript
+traditional
 
-[Leia a documentação](https://www.typescriptlang.org/)
+[Read the documentation](https://www.typescriptlang.org/)
 
 ### Husky
 
-Uma biblioteca que facilita a criação de Git hooks de forma automatizada
+A library that facilitates the creation of Git hooks in an automated way
 
-[Leia a documentação](https://typicode.github.io/husky/#/)
+[Read the documentation](https://typicode.github.io/husky/#/)
 
 ### Testing Library
 
-Uma família de bibliotecas que vai lhe ajudar a testar seus componentes de interface.
+A family of libraries that will help you test your interface components.
 
-[Leia a documentação](https://testing-library.com/docs/)
+[Read the documentation](https://testing-library.com/docs/)
 
 ---
 
-Todas essas configurações existentes no template são customizáveis. Fique a vontade para
-modificar e adaptar ao seu gosto e projeto.
+All these existing settings in the template are customizable.  Feel free to modify and adapt to your taste and project.
 
 ## Installing 👨‍💻
 
