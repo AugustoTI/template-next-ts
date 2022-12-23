@@ -1,0 +1,3 @@
+{
+  "src/**/*": ["yarn lint", "yarn test --findRelatedTests --bail"]
+}
