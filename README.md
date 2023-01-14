@@ -17,7 +17,8 @@
 
 A code formatter to make your code more readable and standardized.
 
-**NOTE:** If you have the Prettier extension installed in your Visual Studio Code, create a folder called `.vscode` (if you don't already have it) and put the following code:
+**NOTE:** If you have the Prettier extension installed in your Visual Studio Code, create
+a folder called `.vscode` (if you don't already have it) and put the following code:
 
 ```json
 {
@@ -29,30 +30,30 @@ A code formatter to make your code more readable and standardized.
 
 ### ESLint
 
-Will analyze your code to **avoid bugs and errors**.  Has integration with React, Prettier and the most diverse technologies.
+Will analyze your code to **avoid bugs and errors**. Has integration with React, Prettier
+and the most diverse technologies.
 
 [Read the documentation](https://eslint.org/)
 
 ### Jest
 
-It's a framework for creating **unit tests** of your code.  best guarantee
-quality in written code and saves your time.  Initially thinking to run on NodeJS,
-but currently, it is also possible to perform tests for the Browser
+It's a framework for creating **unit tests** of your code. best guarantee quality in
+written code and saves your time. Initially thinking to run on NodeJS, but currently, it
+is also possible to perform tests for the Browser
 
 [Read the documentation](https://jestjs.io/)
 
 ### Axios
 
-An improved version of the Fetch API.  Provides various facilities to make requests and
+An improved version of the Fetch API. Provides various facilities to make requests and
 works both on Server and Browser.
 
 [Read the documentation](https://axios-http.com/docs/intro)
 
 ### Typescript
 
-An improved version of our good old Javascript.  Adds the possibility of typing
-static and other features that normally don't arrive or exist in Javascript
-traditional
+An improved version of our good old Javascript. Adds the possibility of typing static and
+other features that normally don't arrive or exist in Javascript traditional
 
 [Read the documentation](https://www.typescriptlang.org/)
 
@@ -70,7 +71,8 @@ A family of libraries that will help you test your interface components.
 
 ---
 
-All these existing settings in the template are customizable.  Feel free to modify and adapt to your taste and project.
+All these existing settings in the template are customizable. Feel free to modify and
+adapt to your taste and project.
 
 ## Installing 👨‍💻
 
@@ -80,6 +82,8 @@ To run the template, open the terminal in the repository you want and run in you
 yarn create next-app [name-of-your-project] -e https://github.com/AugustoTI/template-next-ts
   # or
 npx create-next-app [name-of-your-project] -e https://github.com/AugustoTI/template-next-ts
+  # or
+pnpm create next-app [name-of-your-project] -e https://github.com/AugustoTI/template-next-ts
 ```
 
 > don't forget to rename the project in package.json
