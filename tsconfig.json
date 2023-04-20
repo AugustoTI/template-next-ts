@@ -17,7 +17,10 @@
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": false,
     "baseUrl": "./",
-    "paths": {}
+    "paths": {
+      "@/*": ["src/*"],
+      "~/*": ["public/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
