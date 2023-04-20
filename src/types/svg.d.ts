@@ -1,5 +1,5 @@
 declare module '*.svg?url' {
-  const content: any
+  const content: import('next/image').StaticImageData
 
   export default content
 }
