@@ -1,5 +1,5 @@
 import '@/styles/global.css'
-import { type FC, type ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 
 interface RootLayoutProps {
   children: ReactNode
@@ -13,4 +13,4 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   )
 }
 
-export { RootLayout as default }
+export default RootLayout

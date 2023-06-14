@@ -1,5 +1,5 @@
-import { type Metadata } from 'next'
-import { type FC } from 'react'
+import { Metadata } from 'next'
+import { FC } from 'react'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -10,4 +10,4 @@ const HomePage: FC = () => {
   return <h1>Hello, Next.js!</h1>
 }
 
-export { HomePage as default }
+export default HomePage
