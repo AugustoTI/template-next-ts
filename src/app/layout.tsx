@@ -1,16 +1,14 @@
 import '@/styles/global.css'
-import { FC, ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 interface RootLayoutProps {
   children: ReactNode
 }
 
-const RootLayout: FC<RootLayoutProps> = ({ children }) => {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>{children}</body>
     </html>
   )
 }
-
-export default RootLayout
