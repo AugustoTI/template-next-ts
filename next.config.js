@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: process.env.MODE_OF_BUILD,
   experimental: {
     appDir: true
   },
