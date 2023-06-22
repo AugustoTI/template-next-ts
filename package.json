@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "static": "MODE_OF_BUILD='export' next build",
+    "start:static": "serve",
     "lint": "eslint . --fix --max-warnings=0",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch --detectOpenHandles --coverage",
@@ -46,6 +46,7 @@
     "jest-environment-jsdom": "^29.5.0",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
+    "serve": "^14.2.0",
     "typescript": "5.1.3"
   }
 }

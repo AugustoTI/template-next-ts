@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: process.env.MODE_OF_BUILD,
   experimental: {
-    appDir: true
+    appDir: true,
   },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
