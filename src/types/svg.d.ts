@@ -1,4 +1,4 @@
-declare module '*.svg?url' {
+declare module '*.svg' {
   import { StaticImageData } from 'next/image'
   const content: StaticImageData
 
