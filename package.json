@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:static": "serve",
     "build": "next build",
     "start": "next start",
-    "start:static": "serve",
     "lint": "eslint . --fix --max-warnings=0",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch --detectOpenHandles --coverage",
