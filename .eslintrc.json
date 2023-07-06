@@ -18,6 +18,8 @@
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:jest/recommended",
+    "plugin:jest-dom/recommended",
     "next/core-web-vitals"
   ],
   "overrides": [],
