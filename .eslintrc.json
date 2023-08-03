@@ -18,9 +18,7 @@
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:jest/recommended",
-    "plugin:jest-dom/recommended",
-    "next/core-web-vitals"
+    "plugin:@next/next/recommended"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -34,8 +32,6 @@
   "plugins": [],
   "rules": {
     "react/prop-types": "off",
-    "@next/next/no-img-element": "off",
-    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/ban-types": "off"
   }
 }
