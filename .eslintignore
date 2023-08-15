@@ -1,27 +1,18 @@
-# Dependencies
-/node_modules
-/.pnp
+node_modules/
+.pnp/
 .pnp.js
-
-# Testing
-/coverage
-
-# Next.js
-/.next/
-/out/
-
-# Production
-/build
-
-# Misc
+coverage/
+.vscode/
+.public/
+.swc/
+.next/
+out/
+build/
 .DS_Store
 *.pem
-
-# Vercel
 .vercel
-
-# Typescript
 *.tsbuildinfo
 next-env.d.ts
-
+pnpm-lock.yaml
+.husky/
 *.js

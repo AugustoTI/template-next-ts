@@ -1,3 +1,0 @@
-{
-  "src/**/*.{ts,tsx}": ["pnpm lint", "pnpm test -- --findRelatedTests"]
-}
