@@ -6,9 +6,6 @@ const nextConfig = {
   compiler: {
     removeConsole: !isDev,
   },
-  experimental: {
-    appDir: true,
-  },
 }
 
 module.exports = nextConfig
