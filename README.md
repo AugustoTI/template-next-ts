@@ -1,4 +1,4 @@
-# ✨ Template start for Nextjs 13 with Typescript ✨
+# ✨ Template start for NextJS 14 with Typescript ✨
 
 Embedded technology list:
 
@@ -9,7 +9,6 @@ Embedded technology list:
 - Prettier
 - Husky
 - Lint-Staged
-- Axios
 
 All of these existing settings in the template are customizable. Feel free to modify and
 adapt them to your taste and project.
@@ -34,9 +33,9 @@ pnpm create next-app <name-of-your-project> -e https://github.com/AugustoTI/temp
 </aside>
 <br />
 
-## Generating and testing static serverless builds on Next 13
+## Generating and testing static serverless builds on NextJS 14
 
-On version 13 of NextJS, a new way of exporting your project to static or
+On version 14 of NextJS, a new way of exporting your project to static or
 [SPA](https://developer.mozilla.org/en-US/docs/Glossary/SPA) and serverless was introduced
 (replacing the old command `next export`).
 
@@ -45,10 +44,9 @@ Go to your `next.config.js` file and add the new option.:
 ```jsx
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ... Other settings
-  // This option is optional, if you omit it, next will use the default build method ( with server )
+  // ...
   output: 'export', // "export" | "standalone" | undefined
-  // ... Other settings
+  // ...
 }
 
 module.exports = nextConfig
@@ -65,13 +63,13 @@ Finally, to test your production bundle, run the command:
 ```bash
 # Yarn
 yarn build
-yarn dev:static path/to/directory
+yarn start:static
 
 # NPM
 npm run build
-npm run dev:static path/to/directory
+npm run start:static
 
 # PNPM
 pnpm build
-pnpm dev:static path/to/directory
+pnpm start:static
 ```
