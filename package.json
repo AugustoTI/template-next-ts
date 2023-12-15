@@ -7,7 +7,7 @@
     "build": "next build",
     "start:static": "serve out",
     "start": "next start",
-    "lint": "next lint --fix --max-warnings=0",
+    "lint": "eslint src --fix --max-warnings=0",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch --coverage --detectOpenHandles",
     "test:coverage": "jest --coverage",
@@ -20,6 +20,12 @@
     "react-dom": "18.2.0",
     "sharp": "^0.33.0",
     "tailwind-merge": "^2.1.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "pnpm lint",
+      "pnpm test -- --findRelatedTests"
+    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
