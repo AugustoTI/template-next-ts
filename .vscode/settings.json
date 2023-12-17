@@ -5,5 +5,8 @@
     "soucer.fixAll.eslint": "explicit"
   },
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "tailwindCSS.experimental.classRegex": [
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
 }
