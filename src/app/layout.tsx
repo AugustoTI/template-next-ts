@@ -1,6 +1,7 @@
-import '@/styles/global.css'
-import { type Metadata } from 'next'
+import '~/styles/global.css'
+
 import { type ReactNode } from 'react'
+import { type Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
