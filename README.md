@@ -9,6 +9,8 @@ Embedded technology list:
 - Prettier
 - Husky
 - Lint-Staged
+- TailwindCSS
+- Next-PWA
 
 All of these existing settings in the template are customizable. Feel free to modify and
 adapt them to your taste and project.
