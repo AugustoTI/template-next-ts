@@ -16,3 +16,4 @@ next-env.d.ts
 pnpm-lock.yaml
 .husky/
 *.js
+.storybook/
