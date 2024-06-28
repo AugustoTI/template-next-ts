@@ -4,6 +4,14 @@ commit-msg:
       run: pnpm commitlint --edit {1}
 
 pre-commit:
+  parallel: true
   commands:
-    'Lint in files':
-      run: pnpm lint-staged
+    'prettier-css':
+      glob: '*.css'
+      run: prettier -w {staged_files}
+    'running-eslint':
+      glob: '*.{ts,tsx}'
+      run: 'pnpm lint {staged_files}'
+    'running-tests':
+      glob: '*.{ts,tsx}'
+      run: 'pnpm test -- --findRelatedTests {staged_files}'
