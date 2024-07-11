@@ -6,12 +6,7 @@ commit-msg:
 pre-commit:
   parallel: true
   commands:
-    'prettier-css':
-      glob: '*.css'
-      run: prettier -w {staged_files}
     'running-eslint':
-      glob: '*.{ts,tsx}'
-      run: 'pnpm lint {staged_files}'
+      run: 'pnpm lint src'
     'running-tests':
-      glob: '*.{ts,tsx}'
-      run: 'pnpm test -- --findRelatedTests {staged_files}'
+      run: 'pnpm test -- --detectOpenHandles'

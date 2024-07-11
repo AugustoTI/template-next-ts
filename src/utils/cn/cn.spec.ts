@@ -1,6 +1,6 @@
-import { cn } from '~/lib/utils'
+import { cn } from '.'
 
-describe('lib/utils.ts', () => {
+describe('utils/cn', () => {
   it('should overwrite the previous className', () => {
     const className = cn('px-2', 'px-4')
 
