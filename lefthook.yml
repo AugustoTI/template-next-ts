@@ -9,4 +9,4 @@ pre-commit:
     'running-eslint':
       run: 'pnpm lint src'
     'running-tests':
-      run: 'pnpm test -- --detectOpenHandles'
+      run: 'pnpm test -- --findRelatedTests {staged_files}'

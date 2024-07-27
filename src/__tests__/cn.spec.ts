@@ -1,4 +1,4 @@
-import { cn } from '.'
+import { cn } from '@/libs/utils'
 
 describe('utils/cn', () => {
   it('should overwrite the previous className', () => {
