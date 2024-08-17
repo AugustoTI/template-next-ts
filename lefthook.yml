@@ -8,5 +8,7 @@ pre-commit:
   commands:
     'running-eslint':
       run: 'pnpm lint src'
+    'running-type-check':
+      run: 'pnpm tsc'
     'running-tests':
       run: 'pnpm test -- --findRelatedTests {staged_files}'
