@@ -11,4 +11,5 @@ pre-commit:
     'running-type-check':
       run: 'pnpm tsc'
     'running-tests':
+      glob: '*.{tsx,ts}'
       run: 'pnpm test -- --findRelatedTests {staged_files}'
