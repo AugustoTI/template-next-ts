@@ -21,6 +21,8 @@ export default [
       '**/*.d.ts',
       'node_modules',
       'public/**',
+      'out/**',
+      'build/**',
       'coverage/**',
       '.vscode/**',
       '.public/**',
@@ -43,6 +45,7 @@ export default [
       ...eslintReact.configs.flat.recommended.rules,
       ...eslintReact.configs.flat['jsx-runtime'].rules,
       ...eslintReactHooks.configs.recommended.rules,
+      'react/prop-types': 'off',
     },
     settings: {
       react: {
