@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
-    "start:static": "serve out",
+    "start:no-server": "serve out",
     "start": "next start",
     "lint": "eslint --fix --max-warnings=0",
     "test": "jest --passWithNoTests",
