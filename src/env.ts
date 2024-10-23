@@ -6,7 +6,6 @@ export const env = createEnv({
     NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
   },
   client: {},
-  runtimeEnv: {
-    NODE_ENV: process.env.NODE_ENV,
-  },
+  // Only for client variables
+  experimental__runtimeEnv: {},
 })
