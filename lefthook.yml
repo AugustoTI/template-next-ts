@@ -1,10 +1,14 @@
 pre-commit:
   parallel: true
   commands:
-    'running-eslint':
-      run: 'pnpm lint src'
-    'running-type-check':
-      run: 'pnpm tsc'
-    'running-tests':
+    running-eslint:
+      glob: '*.{ts,tsx,mjs}'
+      run: pnpm lint {staged_files}
+    running-prettier:
+      glob: '*.{css,json,mdx,md}'
+      run: pnpm prettier -w {staged_files}
+    running-tests:
       glob: '*.{tsx,ts}'
       run: 'pnpm test -- --findRelatedTests {staged_files}'
+    running-type-check:
+      run: 'pnpm tsc'

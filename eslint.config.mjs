@@ -6,17 +6,21 @@ import eslintReactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
-/** @type { import("eslint").Linter.Config[] } */
-export default [
+export default tseslint.config(
+  eslint.configs.recommended,
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
   {
     languageOptions: {
       globals: { ...globals.browser, ...globals.node, ...globals.jest },
       parserOptions: {
         ecmaFeatures: { jsx: true },
-        ecmaVersion: 'latest',
         sourceType: 'module',
+        ecmaVersion: 'latest',
       },
     },
+  },
+  {
     ignores: [
       '**/*.d.ts',
       'node_modules',
@@ -29,14 +33,13 @@ export default [
       '.next/**',
       '*.tsbuildinfo',
       'pnpm-lock.yaml',
-      '.storybook/**',
+      '!.storybook',
     ],
   },
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
+
   eslintPrettier,
   {
-    files: ['**/*.{mjs,ts,tsx}'],
+    files: ['**/*.{ts,tsx,js,jsx}'],
     plugins: {
       react: eslintReact,
       'react-hooks': eslintReactHooks,
@@ -48,10 +51,8 @@ export default [
       'react/prop-types': 'off',
     },
     settings: {
-      react: {
-        version: 'detect',
-      },
+      react: { version: 'detect' },
     },
   },
   jsxA11y.flatConfigs.recommended,
-]
+)
