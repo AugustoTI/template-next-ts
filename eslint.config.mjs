@@ -1,6 +1,6 @@
 import eslint from '@eslint/js'
+import eslintConfigPrettier from 'eslint-config-prettier'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
-import eslintPrettier from 'eslint-plugin-prettier/recommended'
 import eslintReact from 'eslint-plugin-react'
 import eslintReactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
@@ -8,11 +8,13 @@ import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
   eslint.configs.recommended,
+  eslintConfigPrettier,
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
+  jsxA11y.flatConfigs.recommended,
   {
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node, ...globals.jest },
+      globals: { ...globals.browser, ...globals.node },
       parserOptions: {
         ecmaFeatures: { jsx: true },
         sourceType: 'module',
@@ -36,8 +38,6 @@ export default tseslint.config(
       '!.storybook',
     ],
   },
-
-  eslintPrettier,
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
     plugins: {
@@ -54,5 +54,17 @@ export default tseslint.config(
       react: { version: 'detect' },
     },
   },
-  jsxA11y.flatConfigs.recommended,
+  {
+    rules: {
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+        },
+      ],
+    },
+  },
 )

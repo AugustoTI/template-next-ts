@@ -5,7 +5,7 @@ pre-commit:
       glob: '*.{ts,tsx,mjs}'
       run: pnpm lint {staged_files}
     running-prettier:
-      glob: '*.{css,json,mdx,md}'
+      glob: '*.{js,jsx,ts,tsx,css,json,md,mdx,mjs}'
       run: pnpm prettier -w {staged_files}
     running-tests:
       glob: '*.{tsx,ts}'
