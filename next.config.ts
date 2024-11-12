@@ -1,4 +1,4 @@
-import './src/env.ts'
+import './src/lib/env'
 
 import { type NextConfig } from 'next'
 

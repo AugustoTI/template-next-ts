@@ -7,7 +7,10 @@
     "build": "next build",
     "start:no-server": "serve out",
     "start": "next start",
-    "lint": "eslint --fix --max-warnings=0",
+    "lint": "eslint --max-warnings=0",
+    "lint:fix": "eslint --fix --max-warnings=0",
+    "format:check": "prettier -c",
+    "format:fix": "eslint -w",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch --coverage --detectOpenHandles",
     "test:coverage": "jest --coverage",
@@ -18,22 +21,21 @@
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.11.1",
     "clsx": "^2.1.1",
-    "next": "^15.0.2",
+    "next": "^15.0.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "sharp": "^0.33.5",
     "tailwind-merge": "^2.5.4",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
-    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
     "@types/eslint__js": "^8.42.3",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.8.7",
+    "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "18.3.1",
     "autoprefixer": "^10.4.20",
@@ -48,7 +50,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-extended": "^4.0.2",
     "lefthook": "^1.8.2",
-    "postcss": "^8.4.47",
+    "postcss": "^8.4.49",
     "postcss-load-config": "^6.0.1",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
@@ -58,6 +60,6 @@
     "tailwindcss": "^3.4.14",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.6.3",
-    "typescript-eslint": "^8.13.0"
+    "typescript-eslint": "^8.14.0"
   }
 }
