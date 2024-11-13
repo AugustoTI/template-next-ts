@@ -6,7 +6,8 @@
   },
   "editor.formatOnSave": true,
   "tailwindCSS.experimental.classRegex": [
-    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
   "editor.quickSuggestions": {
     "strings": "on"
