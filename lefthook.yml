@@ -3,7 +3,7 @@ pre-commit:
   commands:
     running-eslint:
       glob: '*.{ts,tsx,mjs}'
-      run: pnpm lint {staged_files}
+      run: pnpm lint:check {staged_files}
     running-prettier:
       glob: '*.{js,jsx,ts,tsx,css,json,md,mdx,mjs}'
       run: pnpm format:check {staged_files}
@@ -12,3 +12,8 @@ pre-commit:
       run: 'pnpm test -- --findRelatedTests {staged_files}'
     running-type-check:
       run: 'pnpm tsc'
+
+commit-msg:
+  commands:
+    running-lint-message:
+      run: 'pnpm commitlint --edit'
