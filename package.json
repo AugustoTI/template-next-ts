@@ -11,7 +11,7 @@
     "lint:check": "eslint --cache --max-warnings=0",
     "lint:fix": "eslint --cache --fix --max-warnings=0",
     "format:check": "prettier -c",
-    "format:fix": "eslint -w",
+    "format:fix": "prettier -w",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch --coverage --detectOpenHandles",
     "test:coverage": "jest --coverage",
@@ -19,7 +19,6 @@
     "clean": "rimraf .next coverage out"
   },
   "dependencies": {
-    "@commitlint/prompt-cli": "^19.5.0",
     "@t3-oss/env-nextjs": "^0.11.1",
     "class-variance-authority": "^0.7.0",
     "next": "^15.0.3",
