@@ -8,7 +8,7 @@ pre-commit:
       run: pnpm format {staged_files}
     running-tests:
       glob: '*.{tsx,ts}'
-      run: 'pnpm test -- --findRelatedTests {staged_files}'
+      run: 'pnpm vitest related --run {staged_files}'
     running-type-check:
       run: 'pnpm tsc'
 
