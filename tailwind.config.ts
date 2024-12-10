@@ -1,4 +1,3 @@
-import pluginScrollbar from 'tailwind-scrollbar'
 import { type Config } from 'tailwindcss'
 import pluginAnimations from 'tailwindcss-animate'
 
@@ -7,5 +6,5 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [pluginAnimations, pluginScrollbar],
+  plugins: [pluginAnimations],
 } satisfies Config
