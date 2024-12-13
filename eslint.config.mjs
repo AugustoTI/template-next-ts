@@ -1,3 +1,4 @@
+import { FlatCompat } from '@eslint/eslintrc'
 import eslint from '@eslint/js'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
@@ -5,6 +6,10 @@ import eslintReact from 'eslint-plugin-react'
 import eslintReactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
+
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+})
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -67,4 +72,7 @@ export default tseslint.config(
       ],
     },
   },
+  ...compat.config({
+    extends: ['plugin:@next/next/recommended'],
+  }),
 )
