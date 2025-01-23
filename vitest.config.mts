@@ -8,6 +8,6 @@ export default defineConfig({
     globals: true,
     passWithNoTests: true,
     environment: 'happy-dom',
-    setupFiles: ['./tests/setup.ts'],
+    setupFiles: ['./vitest.setup.ts'],
   },
 })
