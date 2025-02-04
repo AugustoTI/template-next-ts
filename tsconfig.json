@@ -17,7 +17,8 @@
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "#/*": ["./public/*"]
     },
     "plugins": [{ "name": "next" }],
     "tsBuildInfoFile": ".temp/.tsbuildinfo"
