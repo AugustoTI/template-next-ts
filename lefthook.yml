@@ -1,18 +1,26 @@
 pre-commit:
   parallel: true
-  commands:
-    running-eslint:
+  jobs:
+    - name: running-eslint
       run: pnpm lint
-    running-prettier:
-      glob: '*.{js,jsx,ts,tsx,css,json,md,mdx,mjs}'
+      stage_fixed: true
+
+    - name: running-prettier
+      glob: '*.{css,json,md,mdx,mjs}'
       run: pnpm format {staged_files}
-    running-tests:
+      stage_fixed: true
+
+    - name: running-type-check
+      run: pnpm tsc
+
+    - name: running-tests
       glob: '*.{tsx,ts}'
-      run: 'pnpm vitest related --run {staged_files}'
-    running-type-check:
-      run: 'pnpm tsc'
+      run: pnpm test -- --findRelatedTests {staged_files}
 
 commit-msg:
-  commands:
-    running-lint-message:
-      run: 'pnpm commitlint --edit'
+  jobs:
+    - run: pnpm commitlint --edit
+
+pre-push:
+  jobs:
+    - run: pnpm build

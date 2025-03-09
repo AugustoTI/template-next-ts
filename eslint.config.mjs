@@ -19,7 +19,7 @@ export default tseslint.config(
   jsxA11y.flatConfigs.recommended,
   {
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
+      globals: { ...globals.browser, ...globals.node, ...globals.jest },
       parserOptions: {
         ecmaFeatures: { jsx: true },
         sourceType: 'module',
