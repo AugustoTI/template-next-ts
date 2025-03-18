@@ -1,4 +1,4 @@
-import tailwindAnimatePlugin from 'tailwindcss-animate'
+import motionPlugin from 'tailwindcss-motion'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,12 +6,12 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: '1.5rem',
+      padding: '1rem',
       screens: {
         '2xl': '1400px',
       },
     },
     extend: {},
   },
-  plugins: [tailwindAnimatePlugin],
+  plugins: [motionPlugin],
 }
