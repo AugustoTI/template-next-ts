@@ -1,14 +1,9 @@
 {
-  "prettier.configPath": "./.prettierrc.json",
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
     "soucer.fixAll.eslint": "explicit"
   },
   "editor.formatOnSave": true,
-  "tailwindCSS.experimental.classRegex": [
-    ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ],
+  "tailwindCSS.classFunctions": ["cn", "tv"],
   "editor.quickSuggestions": {
     "strings": "on"
   },
