@@ -1,2 +1,2 @@
 @import 'tailwindcss';
-@plugin 'tailwindcss-motion';
+@import 'tw-animate-css';
