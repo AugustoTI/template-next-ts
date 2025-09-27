@@ -1,0 +1,61 @@
+:root {
+  --default-50: theme(--color-gray-50);
+  --default-100: theme(--color-gray-100);
+  --default-200: theme(--color-gray-200);
+  --default-300: theme(--color-gray-300);
+  --default-400: theme(--color-gray-400);
+  --default-500: theme(--color-gray-500);
+  --default-600: theme(--color-gray-600);
+  --default-700: theme(--color-gray-700);
+  --default-800: theme(--color-gray-800);
+  --default-900: theme(--color-gray-900);
+  --default-950: theme(--color-gray-950);
+
+  --primary-50: theme(--color-blue-50);
+  --primary-100: theme(--color-blue-100);
+  --primary-200: theme(--color-blue-200);
+  --primary-300: theme(--color-blue-300);
+  --primary-400: theme(--color-blue-400);
+  --primary-500: theme(--color-blue-500);
+  --primary-600: theme(--color-blue-600);
+  --primary-700: theme(--color-blue-700);
+  --primary-800: theme(--color-blue-800);
+  --primary-900: theme(--color-blue-900);
+  --primary-950: theme(--color-blue-950);
+
+  --success-50: theme(--color-emerald-50);
+  --success-100: theme(--color-emerald-100);
+  --success-200: theme(--color-emerald-200);
+  --success-300: theme(--color-emerald-300);
+  --success-400: theme(--color-emerald-400);
+  --success-500: theme(--color-emerald-500);
+  --success-600: theme(--color-emerald-600);
+  --success-700: theme(--color-emerald-700);
+  --success-800: theme(--color-emerald-800);
+  --success-900: theme(--color-emerald-900);
+  --success-950: theme(--color-emerald-950);
+
+  --warning-50: theme(--color-yellow-50);
+  --warning-100: theme(--color-yellow-100);
+  --warning-200: theme(--color-yellow-200);
+  --warning-300: theme(--color-yellow-300);
+  --warning-400: theme(--color-yellow-400);
+  --warning-500: theme(--color-yellow-500);
+  --warning-600: theme(--color-yellow-600);
+  --warning-700: theme(--color-yellow-700);
+  --warning-800: theme(--color-yellow-800);
+  --warning-900: theme(--color-yellow-900);
+  --warning-950: theme(--color-yellow-950);
+
+  --danger-50: theme(--color-red-50);
+  --danger-100: theme(--color-red-100);
+  --danger-200: theme(--color-red-200);
+  --danger-300: theme(--color-red-300);
+  --danger-400: theme(--color-red-400);
+  --danger-500: theme(--color-red-500);
+  --danger-600: theme(--color-red-600);
+  --danger-700: theme(--color-red-700);
+  --danger-800: theme(--color-red-800);
+  --danger-900: theme(--color-red-900);
+  --danger-950: theme(--color-red-950);
+}

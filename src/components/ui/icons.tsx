@@ -1,0 +1,29 @@
+import {
+  LuBox,
+  LuCheck,
+  LuCircleDollarSign,
+  LuEye,
+  LuEyeOff,
+  LuHouse,
+  LuImage,
+  LuLoader,
+  LuMinus,
+  LuSettings,
+  LuUser,
+  LuX,
+} from 'react-icons/lu'
+
+export const Icons = {
+  Box: LuBox,
+  Check: LuCheck,
+  Minus: LuMinus,
+  EyeOff: LuEyeOff,
+  Eye: LuEye,
+  Loader: LuLoader,
+  Image: LuImage,
+  X: LuX,
+  CircleDollarSign: LuCircleDollarSign,
+  House: LuHouse,
+  Settings: LuSettings,
+  User: LuUser,
+}
