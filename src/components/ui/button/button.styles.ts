@@ -1,7 +1,7 @@
 import { tv, type VariantProps } from 'tailwind-variants'
 
 export const buttonVariants = tv({
-  base: "relative inline-flex shrink-0 items-center justify-center gap-2 rounded-md border text-sm font-medium whitespace-nowrap shadow-xs outline-0 outline-offset-2 outline-primary-500 transition ease-in-out focus-visible:outline-2 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none disabled:select-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  base: "relative inline-flex shrink-0 items-center justify-center gap-2 rounded-md border text-sm font-medium tracking-wide whitespace-nowrap shadow-xs outline-0 outline-offset-2 outline-primary-500 transition ease-in-out focus-visible:outline-2 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none disabled:select-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   variants: {
     variant: {
       primary: [
@@ -53,7 +53,7 @@ export const buttonVariants = tv({
         // text color
         'text-base-900 dark:text-base-50',
         // hover color
-        'bg-transparent hover:bg-base-100 dark:hover:bg-base-800/80',
+        'bg-transparent hover:bg-base-300 dark:hover:bg-base-800',
         // disabled
         'disabled:text-base-400',
         'dark:disabled:text-base-600',
@@ -77,12 +77,9 @@ export const buttonVariants = tv({
         // border
         'border-transparent',
         // background color
-        'bg-success-600 dark:bg-success-700',
+        'bg-success-700',
         // hover color
-        'hover:bg-success-700 dark:hover:bg-success-600',
-        // disabled
-        'disabled:bg-success-500',
-        'dark:disabled:bg-success-950',
+        'hover:bg-success-800',
       ],
     },
     size: {
