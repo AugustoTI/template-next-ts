@@ -6,6 +6,7 @@ import eslintConfigPrettier from 'eslint-config-prettier'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import eslintReact from 'eslint-plugin-react'
 import eslintReactHooks from 'eslint-plugin-react-hooks'
+import storybook from 'eslint-plugin-storybook'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
@@ -15,9 +16,10 @@ const compat = new FlatCompat({
 
 export default tseslint.config(
   eslint.configs.recommended,
-  eslintConfigPrettier,
-  ...tseslint.configs.strict,
+  ...tseslint.configs.recommended,
   ...tseslint.configs.stylistic,
+  ...storybook.configs['flat/recommended'],
+  eslintConfigPrettier,
   jsxA11y.flatConfigs.recommended,
   {
     languageOptions: {

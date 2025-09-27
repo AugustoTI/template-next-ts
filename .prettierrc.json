@@ -11,7 +11,7 @@
   "endOfLine": "lf",
   "plugins": ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
   "tailwindFunctions": ["cn", "tv"],
-  "tailwindStylesheet": "./src/app/global.css",
+  "tailwindStylesheet": "./src/styles/global.css",
   "importOrder": [
     "^(react/(.*)$)|^(react$)",
     "^(next/(.*)$)|^(next$)",
@@ -26,9 +26,6 @@
     "^~/components/ui/(.*)$",
     "^~/components/(.*)$",
     "^~/assets/(.*)$",
-    "^~/app/(.*)$",
-    "",
-    "^#/app/(.*)$",
     "",
     "^[./]"
   ],
