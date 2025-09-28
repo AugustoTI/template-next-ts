@@ -180,13 +180,13 @@ export function SelectItem({
     <ArkSelect.Item
       className={cn(
         // base
-        'grid cursor-pointer grid-cols-[1fr_20px] gap-x-2 px-3 py-2 outline-hidden transition-colors data-[state=checked]:font-semibold sm:text-sm',
+        'grid cursor-pointer grid-cols-[1fr_20px] gap-x-2 px-3 py-2 outline-hidden transition-colors data-[highlighted]:font-semibold sm:text-sm',
         // text color
         'text-base-900 dark:text-base-50',
         // disabled
-        'data-disabled:pointer-events-none data-disabled:text-base-400 data-disabled:hover:bg-none dark:data-disabled:text-base-600',
+        'data-[disabled]:pointer-events-none data-[disabled]:text-base-400 data-[disabled]:hover:bg-none dark:data-[disabled]:text-base-600',
         // focus
-        'data-highlighted:bg-base-300 dark:data-highlighted:bg-base-800',
+        'data-[highlighted]:bg-base-300 dark:data-[highlighted]:bg-base-800',
         className,
       )}
       {...props}
