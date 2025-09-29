@@ -8,8 +8,8 @@ import React from 'react'
 import { cn } from '~/utils/cn'
 
 export function Tooltip({
-  openDelay = 0,
-  closeDelay = 0,
+  openDelay = 150,
+  closeDelay = 250,
   unmountOnExit = true,
   lazyMount = true,
   ...props
