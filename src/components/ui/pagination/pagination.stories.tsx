@@ -54,7 +54,7 @@ export function Default() {
                   index={index}
                   className={buttonVariants({
                     size: 'icon',
-                    className: 'border-transparent dark:text-base-50',
+                    className: 'border-transparent shadow-none dark:text-base-50',
                   })}
                 >
                   &#8230;
