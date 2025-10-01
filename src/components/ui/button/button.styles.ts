@@ -25,7 +25,7 @@ export const buttonVariants = tv({
         // background color
         'bg-white dark:bg-base-950',
         //hover color
-        'hover:bg-base-50 dark:hover:bg-base-900/60',
+        'hover:bg-base-200 dark:hover:bg-base-900',
         // disabled
         'disabled:text-base-400',
         'dark:disabled:text-base-600',
