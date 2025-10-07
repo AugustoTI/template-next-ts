@@ -9,10 +9,10 @@ export default {
   args: {
     children: 'Click me',
     loading: false,
-    loadingText: 'Loading...',
   },
   argTypes: {
     spinner: { control: { disable: true } },
+    loadingText: { control: { disable: true } },
   },
 } satisfies Meta<typeof LoadingButton>
 
@@ -20,9 +20,13 @@ type Story = StoryObj<typeof LoadingButton>
 
 export const Default: Story = {}
 
-export const CustomSpinner: Story = {
+export const CustomSpinnerAndText: Story = {
   args: {
     spinner: LuLoaderCircle,
     loading: true,
+    loadingText: 'Loading...',
+  },
+  argTypes: {
+    loadingText: { control: { disable: false } },
   },
 }

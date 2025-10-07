@@ -21,7 +21,7 @@ export function LoadingButton({
       {loading ? (
         <>
           {typeof Spinner === 'function' ? <Spinner className="animate-spin" /> : Spinner}
-          {loadingText && <span>{loadingText}</span>}
+          {loadingText ? <span>{loadingText}</span> : children}
         </>
       ) : (
         children
