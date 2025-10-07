@@ -13,11 +13,11 @@ export default {
   },
   argTypes: {
     variant: {
-      options: ['primary', 'secondary', 'ghost', 'danger', 'success'],
+      options: ['primary', 'secondary', 'ghost', 'danger', 'success', 'link'],
       control: { type: 'select' },
     },
     size: {
-      options: ['sm', 'md', 'lg', 'icon'],
+      options: ['sm', 'md', 'lg', 'icon', 'icon-sm', 'icon-lg'],
       control: { type: 'select' },
     },
   },
