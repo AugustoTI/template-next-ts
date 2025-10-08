@@ -64,4 +64,29 @@
   --color-warning-800: var(--warning-800);
   --color-warning-900: var(--warning-900);
   --color-warning-950: var(--warning-950);
+
+  --animate-accordion-up: slideUp 150ms cubic-bezier(0.87, 0, 0.13, 1);
+  --animate-accordion-down: slideDown 150ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@keyframes slideDown {
+  from {
+    /* opacity: 0.01; */
+    height: 0;
+  }
+  to {
+    /* opacity: 1; */
+    height: var(--height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    /* opacity: 1; */
+    height: var(--height);
+  }
+  to {
+    /* opacity: 0.01; */
+    height: 0;
+  }
 }
