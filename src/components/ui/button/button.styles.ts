@@ -81,7 +81,7 @@ export const buttonVariants = tv({
         // hover color
         'hover:bg-success-800',
       ],
-      link: 'border-transparent text-primary-600 underline-offset-4 shadow-none hover:underline',
+      link: 'border-transparent text-primary-600 underline-offset-4 shadow-none hover:underline dark:text-primary-400',
     },
     size: {
       sm: 'h-8 gap-1.5 rounded-md px-3',

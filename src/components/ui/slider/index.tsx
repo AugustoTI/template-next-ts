@@ -2,6 +2,7 @@ import { Slider as ArkSlider } from '@ark-ui/react/slider'
 import { Label, type LabelProps } from '@radix-ui/react-label'
 
 import { cn } from '~/utils/cn'
+import { focusRing } from '~/utils/common-styles'
 
 import { labelStyle } from '../field'
 
@@ -102,8 +103,8 @@ export function SliderThumb({
         // background color
         'bg-white',
         // disabled
-        'data-disabled:pointer-events-none data-disabled:bg-base-200 dark:data-disabled:border-base-800 dark:data-disabled:bg-base-600',
-        'focusRing',
+        'data-[disabled]:pointer-events-none data-[disabled]:bg-base-200 dark:data-[disabled]:border-base-800 dark:data-[disabled]:bg-base-600',
+        focusRing,
         'outline-offset-0',
         className,
       )}
