@@ -1,4 +1,4 @@
-import '~/lib/env'
+import '~/config/env'
 
 import { type NextConfig } from 'next'
 
