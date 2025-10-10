@@ -27,7 +27,12 @@ export function ProgressCircularValueText({
   className,
   ...props
 }: React.ComponentProps<typeof ArkProgress.ValueText>) {
-  return <ArkProgress.ValueText className={cn('text-sm', className)} {...props} />
+  return (
+    <ArkProgress.ValueText
+      className={cn('text-sm text-base-900 dark:text-base-50', className)}
+      {...props}
+    />
+  )
 }
 
 export function ProgressCircularContainer({

@@ -48,7 +48,7 @@ export const Default: Story = {
 }
 
 function CommandDialogModeDemo() {
-  const [open, setOpen] = React.useState(true)
+  const [open, setOpen] = React.useState(false)
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
