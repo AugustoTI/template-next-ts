@@ -36,7 +36,7 @@ export function ProgressCircularContainer({
 }: React.ComponentProps<typeof ArkProgress.Circle>) {
   return (
     <ArkProgress.Circle
-      className={cn('[--size:64px] [--thickness:4px]', className)}
+      className={cn('[--size:4rem] [--thickness:0.25rem]', className)}
       {...props}
     />
   )

@@ -8,6 +8,7 @@ import {
   LuImage,
   LuLoader,
   LuMinus,
+  LuSearch,
   LuSettings,
   LuUser,
   LuX,
@@ -26,4 +27,5 @@ export const Icons = {
   House: LuHouse,
   Settings: LuSettings,
   User: LuUser,
+  Search: LuSearch,
 }
