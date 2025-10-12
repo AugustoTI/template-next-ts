@@ -14,7 +14,7 @@ import {
 import { Menu, MenuContent, MenuItem, MenuPositioner, MenuTrigger } from '../menu'
 
 export default {
-  title: 'Breadcrumb',
+  title: 'UI/Breadcrumb',
 } satisfies Meta
 
 type Story = StoryObj
