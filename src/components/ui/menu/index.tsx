@@ -33,7 +33,7 @@ export function MenuContent({ ...props }: React.ComponentProps<typeof ArkMenu.Co
     <ArkMenu.Content
       className={cn(
         // base
-        'relative z-50 origin-(--transform-origin) overflow-hidden overflow-y-auto rounded-md border p-1 shadow-xl shadow-black/[2.5%] outline-hidden',
+        'relative origin-(--transform-origin) overflow-hidden overflow-y-auto rounded-md border p-1 shadow-xl shadow-black/[2.5%] outline-hidden',
         // widths
         'min-w-48',
         // heights

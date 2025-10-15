@@ -132,7 +132,7 @@ export function SelectContent({
     <ArkSelect.Content
       className={cn(
         // base
-        'relative z-50 overflow-hidden overflow-y-auto rounded-md border shadow-xl shadow-black/[2.5%]',
+        'relative max-h-46 overflow-hidden overflow-y-auto rounded-md border p-1 shadow-xl shadow-black/[2.5%]',
         // background color
         'bg-white dark:bg-base-950',
         // text color
@@ -180,7 +180,7 @@ export function SelectItem({
     <ArkSelect.Item
       className={cn(
         // base
-        'grid cursor-pointer grid-cols-[1fr_20px] gap-x-2 px-3 py-2 outline-hidden transition-colors data-[highlighted]:font-semibold sm:text-sm',
+        'grid cursor-pointer grid-cols-[1fr_20px] gap-x-2 rounded-sm px-3 py-2 outline-hidden transition-colors data-[highlighted]:font-semibold sm:text-sm',
         // text color
         'text-base-900 dark:text-base-50',
         // disabled

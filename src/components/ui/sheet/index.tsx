@@ -39,7 +39,7 @@ export function SheetBackdrop({
       data-slot="sheet-overlay"
       className={cn(
         // base
-        'fixed inset-0 z-50 overflow-y-auto',
+        'fixed inset-0 overflow-y-auto',
         // background color
         'bg-black/30',
         // animation
@@ -70,7 +70,7 @@ export function SheetContent({
       data-slot="sheet-content"
       className={cn(
         // base
-        'fixed z-50 flex flex-col gap-4 shadow-lg transition ease-in-out focus:outline-hidden data-[state=closed]:animate-out data-[state=closed]:duration-150 data-[state=open]:animate-in data-[state=open]:duration-500',
+        'fixed flex flex-col gap-4 shadow-lg transition ease-in-out focus:outline-hidden data-[state=closed]:animate-out data-[state=closed]:duration-150 data-[state=open]:animate-in data-[state=open]:duration-500',
         // border color
         'border-gray-200 dark:border-gray-900',
         // background

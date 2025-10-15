@@ -41,7 +41,7 @@ export function DialogBackdrop({ className, ...props }: DialogBackdropProps) {
     <ArkDialog.Backdrop
       data-slot="dialog-overlay"
       className={cn(
-        'fixed inset-0 z-50 bg-black/50 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0',
+        'fixed inset-0 bg-black/50 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0',
         className,
       )}
       {...props}
@@ -54,7 +54,7 @@ export function DialogPositioner({ className, ...props }: DialogPositionerProps)
     <ArkDialog.Positioner
       data-slot="dialog-positioner"
       className={cn(
-        'fixed inset-0 z-60 flex items-center justify-center overflow-auto',
+        'fixed inset-0 flex items-center justify-center overflow-auto',
         className,
       )}
       {...props}
