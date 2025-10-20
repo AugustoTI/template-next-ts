@@ -1,6 +1,7 @@
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
   - core-js-pure
+  - esbuild
   - lefthook
   - msw
   - sharp
