@@ -11,6 +11,12 @@ importers:
       '@ark-ui/react':
         specifier: ^5.26.0
         version: 5.26.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@internationalized/date':
+        specifier: ^3.10.0
+        version: 3.10.0
+      '@internationalized/number':
+        specifier: ^3.6.5
+        version: 3.6.5
       '@radix-ui/react-label':
         specifier: ^2.1.7
         version: 2.1.7(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
