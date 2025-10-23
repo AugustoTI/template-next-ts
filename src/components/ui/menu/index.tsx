@@ -33,11 +33,11 @@ export function MenuContent({ ...props }: React.ComponentProps<typeof ArkMenu.Co
     <ArkMenu.Content
       className={cn(
         // base
-        'relative origin-(--transform-origin) overflow-hidden overflow-y-auto rounded-md border p-1 shadow-xl shadow-black/[2.5%] outline-hidden',
+        'relative origin-(--transform-origin) overflow-hidden overflow-y-auto rounded-md border p-1 shadow-xl shadow-black/2.5 outline-hidden',
         // widths
         'min-w-48',
         // heights
-        'max-h-[var(--available-height)]',
+        'max-h-(--available-height)',
         // background color
         'bg-white dark:bg-base-950',
         // text color
@@ -60,13 +60,13 @@ export function MenuItem({
     <ArkMenu.Item
       className={cn(
         // base
-        'group/MenuItem relative flex items-center rounded-sm py-1.5 pr-1 pl-2 transition-colors select-none data-[highlighted]:font-semibold sm:text-sm',
+        'group/MenuItem relative flex items-center rounded-sm py-1.5 pr-1 pl-2 transition-colors select-none data-highlighted:font-semibold sm:text-sm',
         // text color
         'text-base-900 dark:text-base-50',
         // disabled
-        'data-[disabled]:pointer-events-none data-[disabled]:text-base-400 data-[disabled]:hover:bg-none dark:data-[disabled]:text-base-600',
+        'data-disabled:pointer-events-none data-disabled:text-base-400 data-disabled:hover:bg-none dark:data-disabled:text-base-600',
         // focus
-        'data-[highlighted]:bg-base-300 dark:data-[highlighted]:bg-base-800',
+        'data-highlighted:bg-base-300 dark:data-highlighted:bg-base-800',
         // hover
         'hover:bg-base-100 dark:hover:bg-base-900',
         className,
@@ -113,11 +113,11 @@ export function MenuTriggerItem({
         // text color
         'text-base-900 dark:text-base-50',
         // disabled
-        'data-[disabled]:pointer-events-none data-[disabled]:text-base-400 data-[disabled]:hover:bg-none dark:data-[disabled]:text-base-600',
+        'data-disabled:pointer-events-none data-disabled:text-base-400 data-disabled:hover:bg-none dark:data-disabled:text-base-600',
         // focus
-        'data-[highlighted]:bg-base-300 data-[state=open]:bg-base-300 dark:data-[highlighted]:bg-base-800 dark:data-[state=open]:bg-base-800',
+        'data-highlighted:bg-base-300 data-[state=open]:bg-base-300 dark:data-highlighted:bg-base-800 dark:data-[state=open]:bg-base-800',
         // hover
-        'data-[highlighted]:bg-base-300 dark:data-[highlighted]:bg-base-800',
+        'data-highlighted:bg-base-300 dark:data-highlighted:bg-base-800',
         className,
       )}
       {...props}
@@ -141,13 +141,13 @@ export function MenuRadioItem({
     <ArkMenu.RadioItem
       className={cn(
         // base
-        'relative flex items-center gap-x-2 rounded-sm py-1.5 pr-1 pl-8 outline-hidden transition-colors select-none data-[highlighted]:font-semibold sm:text-sm',
+        'relative flex items-center gap-x-2 rounded-sm py-1.5 pr-1 pl-8 outline-hidden transition-colors select-none data-highlighted:font-semibold sm:text-sm',
         // text color
         'text-base-900 dark:text-base-50',
         // disabled
-        'data-[disabled]:pointer-events-none data-[disabled]:text-base-400 data-[disabled]:hover:bg-none dark:data-[disabled]:text-base-600',
+        'data-disabled:pointer-events-none data-disabled:text-base-400 data-disabled:hover:bg-none dark:data-disabled:text-base-600',
         // focus
-        'data-[highlighted]:bg-base-300 dark:data-[highlighted]:bg-base-800',
+        'data-highlighted:bg-base-300 dark:data-highlighted:bg-base-800',
         className,
       )}
       {...props}
@@ -163,13 +163,13 @@ export function MenuCheckboxItem({
     <ArkMenu.CheckboxItem
       className={cn(
         // base
-        'relative flex items-center gap-x-2 rounded-sm py-1.5 pr-1 pl-8 outline-hidden transition-colors select-none data-[highlighted]:font-semibold sm:text-sm',
+        'relative flex items-center gap-x-2 rounded-sm py-1.5 pr-1 pl-8 outline-hidden transition-colors select-none data-highlighted:font-semibold sm:text-sm',
         // text color
         'text-base-900 dark:text-base-50',
         // disabled
-        'data-[disabled]:pointer-events-none data-[disabled]:text-base-400 data-[disabled]:hover:bg-none dark:data-[disabled]:text-base-600',
+        'data-disabled:pointer-events-none data-disabled:text-base-400 data-disabled:hover:bg-none dark:data-disabled:text-base-600',
         // focus
-        'data-[highlighted]:bg-base-300 dark:data-[highlighted]:bg-base-800',
+        'data-highlighted:bg-base-300 dark:data-highlighted:bg-base-800',
         className,
       )}
       {...props}
