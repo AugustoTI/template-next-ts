@@ -50,7 +50,7 @@ export const Default: Story = {
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/docs/components">Components</Link>
+              <Link href="/">Components</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
