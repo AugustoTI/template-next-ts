@@ -1,7 +1,8 @@
 import { ark, type HTMLArkProps } from '@ark-ui/react/factory'
-import { LuChevronRight, LuEllipsis } from 'react-icons/lu'
 
 import { cn } from '~/utils/cn'
+
+import { Icons } from '../icons'
 
 function Breadcrumb({ ...props }: React.ComponentProps<'nav'>) {
   return <nav aria-label="breadcrumb" data-slot="breadcrumb" {...props} />
@@ -12,7 +13,7 @@ function BreadcrumbList({ className, ...props }: React.ComponentProps<'ol'>) {
     <ol
       data-slot="breadcrumb-list"
       className={cn(
-        'flex flex-wrap items-center gap-1.5 text-sm break-words text-base-500 sm:gap-2.5 dark:text-base-400',
+        'flex flex-wrap items-center gap-1.5 text-sm wrap-break-word text-base-500 sm:gap-2.5 dark:text-base-400',
         className,
       )}
       {...props}
@@ -69,7 +70,7 @@ function BreadcrumbSeparator({
       className={cn('[&>svg]:size-3.5', className)}
       {...props}
     >
-      {children ?? <LuChevronRight />}
+      {children ?? <Icons.ChevronRight />}
     </li>
   )
 }
@@ -83,7 +84,7 @@ function BreadcrumbEllipsis({ className, ...props }: React.ComponentProps<'span'
       className={cn('flex size-9 items-center justify-center', className)}
       {...props}
     >
-      <LuEllipsis className="size-4" />
+      <Icons.Ellipsis className="size-4" />
       <span className="sr-only">More</span>
     </span>
   )

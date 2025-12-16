@@ -1,8 +1,7 @@
 import { calloutVariants, type CalloutVariantsProps } from './callout.styles'
 
 interface CalloutProps
-  extends React.ComponentPropsWithoutRef<'div'>,
-    CalloutVariantsProps {
+  extends React.ComponentPropsWithoutRef<'div'>, CalloutVariantsProps {
   title: string
   icon?: React.ElementType | React.ReactElement
 }

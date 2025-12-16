@@ -52,7 +52,7 @@ export function ProgressLinearRange({
   return (
     <ArkProgress.Range
       className={cn(
-        'h-full bg-primary-500 transition duration-200 ease-in-out',
+        'h-full bg-primary-500 transition-[width] duration-200 ease-in-out',
         className,
       )}
       {...props}

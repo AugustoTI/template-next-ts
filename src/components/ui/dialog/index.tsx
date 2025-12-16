@@ -67,7 +67,7 @@ export function DialogContent({ className, ...props }: DialogContentProps) {
     <ArkDialog.Content
       data-slot="dialog-content"
       className={cn(
-        'grid w-full max-w-[calc(100%-2rem)] gap-4 rounded-lg border border-base-200 bg-white p-6 shadow-lg duration-200 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 sm:max-w-lg dark:border-base-900 dark:bg-primary-950/20',
+        'grid w-full max-w-[calc(100%-2rem)] gap-4 rounded-lg border border-base-200 bg-white p-6 shadow-lg duration-200 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 sm:max-w-lg dark:border-base-900 dark:bg-base-950',
         className,
       )}
       {...props}
@@ -109,7 +109,7 @@ export function DialogDescription({ className, ...props }: DialogDescriptionProp
   return (
     <ArkDialog.Description
       data-slot="dialog-description"
-      className={cn('text-base-500', className)}
+      className={cn('text-balance text-base-500 sm:text-pretty', className)}
       {...props}
     />
   )

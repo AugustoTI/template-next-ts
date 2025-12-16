@@ -16,8 +16,7 @@ const TabsListVariantContext =
   React.createContext<TabsListVariantProps['variant']>('line')
 
 interface TabsListProps
-  extends React.ComponentProps<typeof ArkTabs.List>,
-    TabsListVariantProps {}
+  extends React.ComponentProps<typeof ArkTabs.List>, TabsListVariantProps {}
 
 export function TabsList({
   className,

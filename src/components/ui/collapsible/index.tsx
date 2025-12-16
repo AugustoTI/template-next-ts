@@ -1,12 +1,20 @@
 import { Collapsible as ArkCollapsible } from '@ark-ui/react/collapsible'
 
+import { cn } from '~/utils/cn'
+
 export function Collapsible({
   unmountOnExit = true,
   lazyMount = true,
+  className,
   ...props
 }: React.ComponentProps<typeof ArkCollapsible.Root>) {
   return (
-    <ArkCollapsible.Root unmountOnExit={unmountOnExit} lazyMount={lazyMount} {...props} />
+    <ArkCollapsible.Root
+      className={cn('group', className)}
+      unmountOnExit={unmountOnExit}
+      lazyMount={lazyMount}
+      {...props}
+    />
   )
 }
 
@@ -23,7 +31,16 @@ export function CollapsibleIndicator({
 }
 
 export function CollapsibleContent({
+  className,
   ...props
 }: React.ComponentProps<typeof ArkCollapsible.Content>) {
-  return <ArkCollapsible.Content {...props} />
+  return (
+    <ArkCollapsible.Content
+      className={cn(
+        'overflow-hidden group-data-[state=closed]:animate-collapsible-up group-data-[state=open]:animate-collapsible-down',
+        className,
+      )}
+      {...props}
+    />
+  )
 }

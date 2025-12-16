@@ -43,8 +43,8 @@ export function PinInputElement({
   return (
     <ArkPinInput.Input
       className={cn(
-        'relative size-9 rounded-md border border-base-300 bg-white text-center text-base-900 shadow-xs outline-hidden transition focus:border-primary-500 focus:ring-primary-200 focus-visible:ring-2 disabled:border-base-300 disabled:bg-base-100 disabled:text-base-400 sm:text-sm dark:border-base-800 dark:bg-base-950 dark:text-base-50 dark:focus:border-primary-700 dark:focus:ring-primary-700/30 dark:disabled:border-base-700 dark:disabled:bg-base-800 dark:disabled:text-base-500',
-        'data-[invalid]:border-danger-500 data-[invalid]:ring-2 data-[invalid]:ring-danger-200 dark:data-[invalid]:border-danger-500 dark:data-[invalid]:ring-danger-500/30',
+        'relative size-9 rounded-md border border-base-300 bg-white text-center text-base-900 shadow-xs outline-hidden transition focus:border-primary-500 focus:ring-primary-200 focus-visible:ring-2 disabled:border-base-300 disabled:bg-base-100 disabled:text-base-400 dark:border-base-800 dark:bg-base-950 dark:text-base-50 dark:focus:border-primary-700 dark:focus:ring-primary-700/30 dark:disabled:border-base-700 dark:disabled:bg-base-800 dark:disabled:text-base-500',
+        'data-invalid:border-danger-500 data-invalid:ring-2 data-invalid:ring-danger-200 dark:data-invalid:border-danger-500 dark:data-invalid:ring-danger-500/30',
         className,
       )}
       {...props}

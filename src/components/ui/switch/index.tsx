@@ -84,7 +84,8 @@ export function SwitchLabel({
 }
 
 interface SwitchElementProps
-  extends Omit<React.ComponentProps<typeof ArkSwitch.Control>, 'className'>,
+  extends
+    Omit<React.ComponentProps<typeof ArkSwitch.Control>, 'className'>,
     VariantProps<typeof switchVariants> {
   classNames?: {
     control?: string

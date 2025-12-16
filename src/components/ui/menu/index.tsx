@@ -28,7 +28,10 @@ export function MenuPositioner({
   return <ArkMenu.Positioner {...props} />
 }
 
-export function MenuContent({ ...props }: React.ComponentProps<typeof ArkMenu.Content>) {
+export function MenuContent({
+  className,
+  ...props
+}: React.ComponentProps<typeof ArkMenu.Content>) {
   return (
     <ArkMenu.Content
       className={cn(
@@ -46,6 +49,7 @@ export function MenuContent({ ...props }: React.ComponentProps<typeof ArkMenu.Co
         'border-base-200 dark:border-base-800',
         // Transition
         'data-[placement=bottom]:slide-in-from-top-2 data-[placement=left]:slide-in-from-right-2 data-[placement=right]:slide-in-from-left-2 data-[placement=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95',
+        className,
       )}
       {...props}
     />

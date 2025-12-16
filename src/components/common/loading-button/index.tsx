@@ -1,6 +1,5 @@
-import { LuLoader } from 'react-icons/lu'
-
 import { Button, type ButtonProps } from '~/components/ui/button'
+import { Icons } from '~/components/ui/icons'
 
 export interface LoadingButtonProps extends ButtonProps {
   loading?: boolean
@@ -11,7 +10,7 @@ export interface LoadingButtonProps extends ButtonProps {
 export function LoadingButton({
   loading,
   loadingText,
-  spinner: Spinner = LuLoader,
+  spinner: Spinner = Icons.Loader,
   disabled,
   children,
   ...props

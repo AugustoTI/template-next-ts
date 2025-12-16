@@ -1,9 +1,9 @@
 import { Checkbox as ArkCheckbox } from '@ark-ui/react/checkbox'
-import { LuCheck, LuMinus } from 'react-icons/lu'
 
 import { cn } from '~/utils/cn'
 
 import { labelStyle } from '../field'
+import { Icons } from '../icons'
 
 export function Checkbox({
   className,
@@ -59,10 +59,10 @@ export function CheckboxElement({
       {...props}
     >
       <ArkCheckbox.Indicator>
-        <LuCheck />
+        <Icons.Check />
       </ArkCheckbox.Indicator>
       <ArkCheckbox.Indicator indeterminate>
-        <LuMinus />
+        <Icons.Minus />
       </ArkCheckbox.Indicator>
     </ArkCheckbox.Control>
   )

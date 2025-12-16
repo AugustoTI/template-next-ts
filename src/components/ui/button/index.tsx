@@ -1,8 +1,8 @@
-import { ark, type HTMLProps } from '@ark-ui/react/factory'
+import { ark, type HTMLArkProps } from '@ark-ui/react/factory'
 
 import { buttonVariants, ButtonVariantsProps } from './button.styles'
 
-export interface ButtonProps extends HTMLProps<'button'>, ButtonVariantsProps {}
+export interface ButtonProps extends HTMLArkProps<'button'>, ButtonVariantsProps {}
 
 export function Button({
   className,

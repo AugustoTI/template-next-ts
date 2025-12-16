@@ -1,10 +1,10 @@
 import { PasswordInput as ArkPasswordInput } from '@ark-ui/react/password-input'
 import { Label, type LabelProps } from '@radix-ui/react-label'
-import { LuEye, LuEyeOff } from 'react-icons/lu'
 
 import { cn } from '~/utils/cn'
 
 import { inputStyles, labelStyle } from '../field'
+import { Icons } from '../icons'
 
 export function PasswordInput({
   className,
@@ -60,9 +60,9 @@ export function PasswordInputIndicator({
   return (
     <ArkPasswordInput.Indicator
       {...props}
-      fallback={fallback ? fallback : <LuEye size={16} />}
+      fallback={fallback ? fallback : <Icons.Eye size={16} />}
     >
-      {children ? children : <LuEyeOff size={16} />}
+      {children ? children : <Icons.EyeOff size={16} />}
     </ArkPasswordInput.Indicator>
   )
 }

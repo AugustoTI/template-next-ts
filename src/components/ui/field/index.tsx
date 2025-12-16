@@ -101,7 +101,7 @@ export function Textarea({ className, ...props }: FieldTextareaProps) {
 export const inputStyles = tv({
   base: [
     // base
-    'relative block w-full appearance-none rounded-md border px-2.5 py-2 text-ellipsis shadow-xs outline-hidden transition sm:text-sm',
+    'relative block w-full appearance-none rounded-md border px-2.5 py-2 shadow-xs outline-hidden transition sm:text-sm [&:not([type="password"])]:text-ellipsis',
     // border color
     'border-base-300 dark:border-base-800',
     // text color
