@@ -1,6 +1,5 @@
 import { HoverCard as ArkHoverCard } from '@ark-ui/react/hover-card'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 export function HoverCard({
   unmountOnExit = true,

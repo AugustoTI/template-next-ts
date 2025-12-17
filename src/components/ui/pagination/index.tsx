@@ -1,6 +1,5 @@
 import { Pagination as ArkPagination } from '@ark-ui/react/pagination'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 export function Pagination({
   className,

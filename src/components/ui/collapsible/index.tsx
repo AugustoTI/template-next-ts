@@ -1,6 +1,5 @@
 import { Collapsible as ArkCollapsible } from '@ark-ui/react/collapsible'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 export function Collapsible({
   unmountOnExit = true,

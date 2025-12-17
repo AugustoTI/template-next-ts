@@ -1,7 +1,5 @@
 import { Switch as ArkSwitch } from '@ark-ui/react/switch'
-import { tv, VariantProps } from 'tailwind-variants'
-
-import { cn } from '~/utils/cn'
+import { cn, tv, VariantProps } from 'tailwind-variants'
 
 import { labelStyle } from '../field'
 

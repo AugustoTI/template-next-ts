@@ -2,8 +2,7 @@
 
 import { Portal } from '@ark-ui/react'
 import { Command as CommandPrimitive } from 'cmdk'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 import {
   Dialog,

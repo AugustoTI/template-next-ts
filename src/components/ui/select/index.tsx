@@ -1,8 +1,7 @@
 import { Select as ArkSelect, type SelectRootProps } from '@ark-ui/react/select'
 import { Label } from '@radix-ui/react-label'
+import { cn } from 'tailwind-variants'
 import React from 'react'
-
-import { cn } from '~/utils/cn'
 
 import { labelStyle } from '../field'
 

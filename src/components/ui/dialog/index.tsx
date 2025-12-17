@@ -9,9 +9,8 @@ import {
   type DialogTitleProps,
   type DialogTriggerProps,
 } from '@ark-ui/react/dialog'
+import { cn } from 'tailwind-variants'
 import React from 'react'
-
-import { cn } from '~/utils/cn'
 
 export function Dialog({
   lazyMount = true,

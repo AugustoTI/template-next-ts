@@ -3,8 +3,7 @@ import {
   type ComboboxRootComponentProps,
 } from '@ark-ui/react/combobox'
 import { Label } from '@radix-ui/react-label'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 import { Input, labelStyle } from '../field'
 

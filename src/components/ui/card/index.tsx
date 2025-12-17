@@ -1,6 +1,5 @@
 import { ark, type HTMLProps } from '@ark-ui/react/factory'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 export function Card({ className, ...props }: HTMLProps<'div'>) {
   return (

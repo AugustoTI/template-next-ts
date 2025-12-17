@@ -1,6 +1,5 @@
 import { Steps as ArkSteps } from '@ark-ui/react/steps'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 export function Steps({
   className,

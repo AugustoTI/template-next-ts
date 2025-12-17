@@ -1,6 +1,5 @@
 import { FileUpload as ArkFileUpload } from '@ark-ui/react/file-upload'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 import { labelStyle } from '../field'
 

@@ -1,7 +1,6 @@
 import { RatingGroup as ArkRattingGroup } from '@ark-ui/react/rating-group'
 import { Label } from '@radix-ui/react-label'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 import { labelStyle } from '../field'
 

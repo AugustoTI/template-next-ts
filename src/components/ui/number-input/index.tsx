@@ -1,6 +1,5 @@
 import { NumberInput as ArkNumberInput } from '@ark-ui/react/number-input'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 import { FieldLabel, Input } from '../field'
 

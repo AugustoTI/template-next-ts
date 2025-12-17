@@ -1,7 +1,7 @@
 import { Slider as ArkSlider } from '@ark-ui/react/slider'
 import { Label, type LabelProps } from '@radix-ui/react-label'
+import { cn } from 'tailwind-variants'
 
-import { cn } from '~/utils/cn'
 import { focusRing } from '~/utils/common-styles'
 
 import { labelStyle } from '../field'

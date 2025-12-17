@@ -1,6 +1,5 @@
 import { Progress as ArkProgress } from '@ark-ui/react/progress'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 import { labelStyle } from '../../field'
 

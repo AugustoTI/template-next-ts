@@ -1,7 +1,6 @@
 import { PinInput as ArkPinInput } from '@ark-ui/react/pin-input'
 import { Label } from '@radix-ui/react-label'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 import { labelStyle } from '../field'
 

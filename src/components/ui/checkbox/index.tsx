@@ -1,6 +1,5 @@
 import { Checkbox as ArkCheckbox } from '@ark-ui/react/checkbox'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 import { labelStyle } from '../field'
 import { Icons } from '../icons'

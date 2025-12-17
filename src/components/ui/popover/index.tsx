@@ -1,7 +1,6 @@
 import { Popover as ArkPopover } from '@ark-ui/react/popover'
+import { cn } from 'tailwind-variants'
 import React from 'react'
-
-import { cn } from '~/utils/cn'
 
 export function Popover({
   lazyMount = true,

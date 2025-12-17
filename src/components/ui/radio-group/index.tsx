@@ -4,8 +4,7 @@ import {
   RadioGroup as ArkRadioGroup,
   useRadioGroupItemContext,
 } from '@ark-ui/react/radio-group'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 import { labelStyle } from '../field'
 

@@ -1,4 +1,4 @@
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 export function Placeholder({ className, ...props }: React.ComponentProps<'div'>) {
   return (

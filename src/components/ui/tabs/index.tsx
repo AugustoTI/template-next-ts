@@ -1,9 +1,9 @@
 'use client'
 
 import { Tabs as ArkTabs } from '@ark-ui/react/tabs'
+import { cn } from 'tailwind-variants'
 import React from 'react'
 
-import { cn } from '~/utils/cn'
 import { focusRing } from '~/utils/common-styles'
 
 import { getVariantStyles, tabListVariants, TabsListVariantProps } from './tabs.styles'

@@ -1,6 +1,5 @@
 import { Avatar as ArkAvatar } from '@ark-ui/react/avatar'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 export function Avatar({
   className,

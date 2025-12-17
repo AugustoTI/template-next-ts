@@ -8,9 +8,7 @@ import {
   type FieldTextareaProps,
 } from '@ark-ui/react/field'
 import { Label, type LabelProps } from '@radix-ui/react-label'
-import { tv } from 'tailwind-variants'
-
-import { cn } from '~/utils/cn'
+import { cn, tv } from 'tailwind-variants'
 
 export function Field({ className, ...props }: FieldRootProps) {
   return <ArkField.Root className={cn('grid gap-2', className)} {...props} />

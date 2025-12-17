@@ -1,6 +1,5 @@
 import { ark, type HTMLArkProps } from '@ark-ui/react/factory'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 import { Icons } from '../icons'
 

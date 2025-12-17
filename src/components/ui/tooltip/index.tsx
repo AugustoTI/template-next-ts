@@ -3,9 +3,8 @@ import {
   type TooltipContentProps,
   type TooltipRootProps,
 } from '@ark-ui/react/tooltip'
+import { cn } from 'tailwind-variants'
 import React from 'react'
-
-import { cn } from '~/utils/cn'
 
 export function Tooltip({
   openDelay = 150,

@@ -1,6 +1,5 @@
 import { Accordion as ArkAccordion } from '@ark-ui/react/accordion'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 export function Accordion({
   collapsible = true,

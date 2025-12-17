@@ -1,6 +1,4 @@
-import { tv, VariantProps } from 'tailwind-variants'
-
-import { cn } from '~/utils/cn'
+import { cn, tv, VariantProps } from 'tailwind-variants'
 
 export const tabListVariants = tv({
   variants: {

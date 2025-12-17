@@ -1,7 +1,6 @@
 import { PasswordInput as ArkPasswordInput } from '@ark-ui/react/password-input'
 import { Label, type LabelProps } from '@radix-ui/react-label'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 import { inputStyles, labelStyle } from '../field'
 import { Icons } from '../icons'

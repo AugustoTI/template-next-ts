@@ -1,6 +1,5 @@
 import { SignaturePad as ArkSignaturePad } from '@ark-ui/react/signature-pad'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 import { buttonVariants } from '../button/button.styles'
 import { FieldLabel } from '../field'

@@ -1,7 +1,6 @@
 import { Dialog as SheetPrimitive } from '@ark-ui/react/dialog'
+import { cn } from 'tailwind-variants'
 import * as React from 'react'
-
-import { cn } from '~/utils/cn'
 
 export function Sheet({
   lazyMount = true,

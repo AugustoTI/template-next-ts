@@ -1,6 +1,5 @@
 import { QrCode as ArkQrCode } from '@ark-ui/react/qr-code'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 export function QrCode({
   className,

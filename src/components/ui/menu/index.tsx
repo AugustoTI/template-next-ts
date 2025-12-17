@@ -1,6 +1,5 @@
 import { Menu as ArkMenu } from '@ark-ui/react/menu'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 export function Menu({
   lazyMount = true,

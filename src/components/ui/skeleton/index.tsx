@@ -1,4 +1,4 @@
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 export function Skeleton({ className, ...props }: React.ComponentProps<'div'>) {
   return (

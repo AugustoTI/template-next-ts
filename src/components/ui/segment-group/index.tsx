@@ -1,6 +1,5 @@
 import { SegmentGroup as ArkSegmentGroup } from '@ark-ui/react/segment-group'
-
-import { cn } from '~/utils/cn'
+import { cn } from 'tailwind-variants'
 
 export function SegmentGroup({
   orientation = 'horizontal',
