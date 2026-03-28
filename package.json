@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "lint": "eslint src --max-warnings 0 --cache-location ./.temp/.eslintcache --fix",
+    "lint": "eslint src --max-warnings=0 --fix",
     "start": "next start",
     "commit": "cz",
     "format": "prettier -wc",

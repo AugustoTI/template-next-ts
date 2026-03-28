@@ -2,7 +2,7 @@ pre-commit:
   parallel: true
   jobs:
     - name: running-eslint
-      run: pnpm lint
+      run: pnpm lint --cache --cache-location .temp/.eslintcache
       stage_fixed: true
 
     - name: running-prettier
@@ -24,3 +24,4 @@ commit-msg:
 pre-push:
   jobs:
     - run: pnpm build
+    - run: pnpm lint
