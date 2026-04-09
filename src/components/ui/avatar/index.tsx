@@ -19,10 +19,12 @@ export function Avatar({
 
 export function AvatarImage({
   className,
+  src,
   ...props
 }: React.ComponentProps<typeof ArkAvatar.Image>) {
   return (
     <ArkAvatar.Image
+      src={src || undefined}
       data-slot="avatar-image"
       className={cn('aspect-square size-full', className)}
       {...props}
