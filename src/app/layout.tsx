@@ -1,8 +1,6 @@
 import '~/styles/global.css'
 
 import { ThemeProvider } from '~/providers/theme-provider'
-import { NextIntlClientProvider } from 'next-intl'
-import { getLocale } from 'next-intl/server'
 import { type Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -11,11 +9,9 @@ export const metadata: Metadata = {
   generator: 'NextJS',
 }
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const language = await getLocale()
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={language} className="antialiased" suppressHydrationWarning>
+    <html lang="pt-BR" className="antialiased" suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"
@@ -23,7 +19,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           enableSystem
           disableTransitionOnChange
         >
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          {children}
         </ThemeProvider>
       </body>
     </html>
