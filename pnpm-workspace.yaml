@@ -8,13 +8,5 @@ onlyBuiltDependencies:
   - msw
   - sharp
   - unrs-resolver
-overrides:
-  brace-expansion@<1.1.13: '>=1.1.13'
-  brace-expansion@>=2.0.0 <2.0.3: '>=2.0.3'
-  lodash@<=4.17.23: '>=4.18.0'
-  lodash@>=4.0.0 <=4.17.22: '>=4.17.23'
-  lodash@>=4.0.0 <=4.17.23: '>=4.18.0'
-  tmp@<=0.2.3: '>=0.2.4'
-  yaml@>=2.0.0 <2.8.3: '>=2.8.3'
 
 sideEffectsCache: false
