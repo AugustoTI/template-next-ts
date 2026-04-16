@@ -41,7 +41,12 @@ export const Default: Story = {
 
               <div className="flex justify-between gap-4">
                 <Avatar>
-                  <AvatarImage src="https://github.com/AugustoTI.png" />
+                  <AvatarImage
+                    src="https://github.com/AugustoTI.png"
+                    width={32}
+                    height={32}
+                    alt="User photo"
+                  />
                   <AvatarFallback>AC</AvatarFallback>
                 </Avatar>
                 <div className="space-y-1">
