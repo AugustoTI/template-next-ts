@@ -64,51 +64,10 @@
   --color-warning-800: var(--warning-800);
   --color-warning-900: var(--warning-900);
   --color-warning-950: var(--warning-950);
-
-  --animate-accordion-up: accordionUp 120ms ease-out;
-  --animate-accordion-down: accordionDown 120ms ease-out;
-  --animate-collapsible-down: collapsibleDown 120ms ease-out;
-  --animate-collapsible-up: collapsibleUp 120ms ease-out;
 }
 
 @layer base {
   body {
     @apply bg-base-50 text-base-950 dark:bg-base-950 dark:text-base-50;
-  }
-}
-
-@keyframes accordionDown {
-  from {
-    height: 0;
-  }
-  to {
-    height: var(--height);
-  }
-}
-
-@keyframes accordionUp {
-  from {
-    height: var(--height);
-  }
-  to {
-    height: 0;
-  }
-}
-
-@keyframes collapsibleDown {
-  from {
-    height: var(--collapsed-height, 0);
-  }
-  to {
-    height: var(--height);
-  }
-}
-
-@keyframes collapsibleUp {
-  from {
-    height: var(--height);
-  }
-  to {
-    height: var(--collapsed-height, 0);
   }
 }
