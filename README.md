@@ -1,5 +1,3 @@
-# Agent Instructions
-
 ## Commands
 
 ```bash
@@ -34,7 +32,7 @@ pnpm clean        # Remove .next and coverage
 ## Architecture
 
 - **src/app/** - Next.js App Router pages
-- **src/components/ui/** - Radix/Ark UI component library
+- **src/components/ui/** - Base UI component library
 - **src/providers/** - React context providers (theme)
 - **src/config/** - App config (env, constants)
 - **src/styles/** - Global CSS (Tailwind 4 + themes)
