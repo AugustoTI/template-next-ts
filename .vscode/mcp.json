@@ -1,8 +1,0 @@
-{
-  "servers": {
-    "ark-ui": {
-      "command": "pnpx",
-      "args": ["@ark-ui/mcp"]
-    }
-  }
-}
