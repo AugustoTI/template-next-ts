@@ -68,6 +68,6 @@
 
 @layer base {
   body {
-    @apply bg-base-50 text-base-950 dark:bg-base-950 dark:text-base-50;
+    @apply bg-white text-base-950 dark:bg-base-950 dark:text-base-50;
   }
 }
