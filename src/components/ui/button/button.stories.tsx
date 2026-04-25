@@ -4,7 +4,7 @@ import { LuLoaderCircle } from 'react-icons/lu'
 import { Button } from '.'
 
 export default {
-  title: 'Button',
+  title: 'UI/Button',
   component: Button,
 } satisfies Meta<typeof Button>
 
