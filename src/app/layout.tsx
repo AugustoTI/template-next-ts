@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className="antialiased" suppressHydrationWarning>
-      <body>
+      <body className="relative isolate">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
