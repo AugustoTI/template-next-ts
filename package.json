@@ -15,7 +15,7 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@base-ui/react": "^1.4.0",
+    "@base-ui/react": "^1.4.1",
     "@t3-oss/env-nextjs": "^0.13.11",
     "cmdk": "^1.1.1",
     "dayjs": "^1.11.20",
@@ -28,9 +28,9 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.5.0",
+    "@commitlint/cli": "^20.5.2",
     "@commitlint/config-conventional": "^20.5.0",
-    "@commitlint/cz-commitlint": "^20.5.1",
+    "@commitlint/cz-commitlint": "^20.5.2",
     "@commitlint/types": "^20.5.0",
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^9.39.4",
@@ -42,7 +42,7 @@
     "@storybook/addon-onboarding": "^10.3.5",
     "@storybook/addon-themes": "^10.3.5",
     "@storybook/nextjs": "^10.3.5",
-    "@tailwindcss/postcss": "^4.2.2",
+    "@tailwindcss/postcss": "^4.2.4",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
@@ -54,24 +54,24 @@
     "eslint-config-next": "^16.2.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-storybook": "^10.3.5",
     "globals": "^17.5.0",
     "jest": "^30.3.0",
     "lefthook": "^2.1.6",
-    "msw": "^2.13.3",
+    "msw": "^2.13.6",
     "msw-storybook-addon": "^2.0.7",
     "postcss": "^8.5.10",
     "postcss-load-config": "^6.0.1",
     "prettier": "^3.8.3",
-    "prettier-plugin-tailwindcss": "^0.7.2",
+    "prettier-plugin-tailwindcss": "^0.7.3",
     "rimraf": "^6.1.3",
     "storybook": "^10.3.5",
-    "tailwindcss": "^4.2.2",
+    "tailwindcss": "^4.2.4",
     "ts-node": "^10.9.2",
     "tw-animate-css": "^1.4.0",
     "typescript": "5.9.3",
-    "typescript-eslint": "^8.58.2"
+    "typescript-eslint": "^8.59.0"
   },
   "config": {
     "commitizen": {
