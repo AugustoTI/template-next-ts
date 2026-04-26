@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/nextjs'
 
-import { Avatar, AvatarFallback, AvatarImage } from '.'
+import { Avatar } from '.'
 
 export default {
   title: 'UI/Avatar',
@@ -13,25 +13,25 @@ export const Default: Story = {
     return (
       <div className="flex flex-row flex-wrap items-center gap-12">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-          <AvatarFallback>CN</AvatarFallback>
+          <Avatar.Image src="https://github.com/shadcn.png" alt="@shadcn" />
+          <Avatar.Fallback>CN</Avatar.Fallback>
         </Avatar>
         <Avatar className="rounded-lg">
-          <AvatarImage src="https://github.com/evilrabbit.png" alt="@evilrabbit" />
-          <AvatarFallback>ER</AvatarFallback>
+          <Avatar.Image src="https://github.com/evilrabbit.png" alt="@evilrabbit" />
+          <Avatar.Fallback>ER</Avatar.Fallback>
         </Avatar>
         <div className="flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-white *:data-[slot=avatar]:grayscale dark:*:data-[slot=avatar]:ring-base-950">
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-            <AvatarFallback>CN</AvatarFallback>
+            <Avatar.Image src="https://github.com/shadcn.png" alt="@shadcn" />
+            <Avatar.Fallback>CN</Avatar.Fallback>
           </Avatar>
           <Avatar>
-            <AvatarImage src="https://github.com/leerob.png" alt="@leerob" />
-            <AvatarFallback>LR</AvatarFallback>
+            <Avatar.Image src="https://github.com/leerob.png" alt="@leerob" />
+            <Avatar.Fallback>LR</Avatar.Fallback>
           </Avatar>
           <Avatar>
-            <AvatarImage src="https://github.com/evilrabbit.png" alt="@evilrabbit" />
-            <AvatarFallback>ER</AvatarFallback>
+            <Avatar.Image src="https://github.com/evilrabbit.png" alt="@evilrabbit" />
+            <Avatar.Fallback>ER</Avatar.Fallback>
           </Avatar>
           <Avatar>LT</Avatar>
         </div>

@@ -1,18 +1,16 @@
 import { Tooltip as TooltipPrimitive } from '@base-ui/react/tooltip'
 import { cn } from 'tailwind-variants'
 
-export function Tooltip({
-  ...props
-}: React.ComponentProps<typeof TooltipPrimitive.Root>) {
+function TooltipRoot({ ...props }: React.ComponentProps<typeof TooltipPrimitive.Root>) {
   return <TooltipPrimitive.Root {...props} />
 }
 
-export const TooltipTrigger = TooltipPrimitive.Trigger
+const TooltipTrigger = TooltipPrimitive.Trigger
 
-export const TooltipPortal = TooltipPrimitive.Portal
-export const TooltipViewport = TooltipPrimitive.Viewport
+const TooltipPortal = TooltipPrimitive.Portal
+const TooltipViewport = TooltipPrimitive.Viewport
 
-export function TooltipPositioner({
+function TooltipPositioner({
   side = 'top',
   sideOffset = 4,
   align = 'center',
@@ -36,7 +34,7 @@ interface TooltipContentProps extends React.ComponentProps<
   showArrow?: boolean
 }
 
-export function TooltipContent({
+function TooltipContent({
   className,
   children,
   showArrow = true,
@@ -57,3 +55,11 @@ export function TooltipContent({
     </TooltipPrimitive.Popup>
   )
 }
+
+export const Tooltip = Object.assign(TooltipRoot, {
+  Trigger: TooltipTrigger,
+  Positioner: TooltipPositioner,
+  Content: TooltipContent,
+  Portal: TooltipPortal,
+  Viewport: TooltipViewport,
+})

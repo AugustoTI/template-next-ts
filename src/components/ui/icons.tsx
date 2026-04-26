@@ -22,12 +22,14 @@ import {
   LuMoon,
   LuSearch,
   LuSettings,
+  LuStar,
   LuSun,
   LuUser,
   LuX,
 } from 'react-icons/lu'
 
 export const Icons = {
+  Star: LuStar,
   Box: LuBox,
   Check: LuCheck,
   Minus: LuMinus,

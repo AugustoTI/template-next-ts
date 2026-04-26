@@ -1,7 +1,7 @@
 import { Avatar as AvatarPrimitive } from '@base-ui/react/avatar'
 import { cn } from 'tailwind-variants'
 
-export function Avatar({
+function AvatarRoot({
   className,
   ...props
 }: React.ComponentProps<typeof AvatarPrimitive.Root>) {
@@ -16,7 +16,7 @@ export function Avatar({
   )
 }
 
-export function AvatarImage({
+function AvatarImage({
   className,
   ...props
 }: React.ComponentProps<typeof AvatarPrimitive.Image>) {
@@ -28,7 +28,7 @@ export function AvatarImage({
   )
 }
 
-export function AvatarFallback({
+function AvatarFallback({
   className,
   ...props
 }: React.ComponentProps<typeof AvatarPrimitive.Fallback>) {
@@ -39,3 +39,8 @@ export function AvatarFallback({
     />
   )
 }
+
+export const Avatar = Object.assign(AvatarRoot, {
+  Image: AvatarImage,
+  Fallback: AvatarFallback,
+})

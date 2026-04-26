@@ -1,6 +1,6 @@
 import { cn } from 'tailwind-variants'
 
-export function TableRoot({ className, ...props }: React.ComponentProps<'div'>) {
+function TableContainer({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
       // Make table scrollable on mobile
@@ -10,7 +10,7 @@ export function TableRoot({ className, ...props }: React.ComponentProps<'div'>) 
   )
 }
 
-export function Table({ className, ...props }: React.ComponentProps<'table'>) {
+function TableRoot({ className, ...props }: React.ComponentProps<'table'>) {
   return (
     <table
       className={cn(
@@ -22,11 +22,11 @@ export function Table({ className, ...props }: React.ComponentProps<'table'>) {
   )
 }
 
-export function TableHead({ ...props }: React.ComponentProps<'thead'>) {
+function TableHead({ ...props }: React.ComponentProps<'thead'>) {
   return <thead {...props} />
 }
 
-export function TableHeaderCell({ className, ...props }: React.ComponentProps<'th'>) {
+function TableHeaderCell({ className, ...props }: React.ComponentProps<'th'>) {
   return (
     <th
       className={cn(
@@ -38,7 +38,7 @@ export function TableHeaderCell({ className, ...props }: React.ComponentProps<'t
   )
 }
 
-export function TableBody({ className, ...props }: React.ComponentProps<'tbody'>) {
+function TableBody({ className, ...props }: React.ComponentProps<'tbody'>) {
   return (
     <tbody
       className={cn('divide-y divide-base-200 dark:divide-base-800', className)}
@@ -47,7 +47,7 @@ export function TableBody({ className, ...props }: React.ComponentProps<'tbody'>
   )
 }
 
-export function TableRow({ className, ...props }: React.ComponentProps<'tr'>) {
+function TableRow({ className, ...props }: React.ComponentProps<'tr'>) {
   return (
     <tr
       className={cn(
@@ -60,7 +60,7 @@ export function TableRow({ className, ...props }: React.ComponentProps<'tr'>) {
   )
 }
 
-export function TableCell({ className, ...props }: React.ComponentProps<'td'>) {
+function TableCell({ className, ...props }: React.ComponentProps<'td'>) {
   return (
     <td
       className={cn('p-4 text-sm text-base-600 dark:text-base-400', className)}
@@ -69,7 +69,7 @@ export function TableCell({ className, ...props }: React.ComponentProps<'td'>) {
   )
 }
 
-export function TableFooter({ className, ...props }: React.ComponentProps<'tfoot'>) {
+function TableFooter({ className, ...props }: React.ComponentProps<'tfoot'>) {
   return (
     <tfoot
       className={cn(
@@ -81,7 +81,7 @@ export function TableFooter({ className, ...props }: React.ComponentProps<'tfoot
   )
 }
 
-export function TableCaption({ className, ...props }: React.ComponentProps<'caption'>) {
+function TableCaption({ className, ...props }: React.ComponentProps<'caption'>) {
   return (
     <caption
       className={cn(
@@ -92,3 +92,14 @@ export function TableCaption({ className, ...props }: React.ComponentProps<'capt
     />
   )
 }
+
+export const Table = Object.assign(TableContainer, {
+  Root: TableRoot,
+  Head: TableHead,
+  HeaderCell: TableHeaderCell,
+  Body: TableBody,
+  Row: TableRow,
+  Cell: TableCell,
+  Footer: TableFooter,
+  Caption: TableCaption,
+})

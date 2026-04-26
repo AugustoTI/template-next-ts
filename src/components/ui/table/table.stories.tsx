@@ -1,14 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/nextjs'
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeaderCell,
-  TableRoot,
-  TableRow,
-} from '.'
+import { Table } from '.'
 import { Badge } from '../badge'
 
 export default {
@@ -85,38 +77,38 @@ const data: {
 export const Default: Story = {
   render() {
     return (
-      <TableRoot className="mt-8">
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableHeaderCell>Workspace</TableHeaderCell>
-              <TableHeaderCell>Owner</TableHeaderCell>
-              <TableHeaderCell>Status</TableHeaderCell>
-              <TableHeaderCell>Region</TableHeaderCell>
-              <TableHeaderCell>Capacity</TableHeaderCell>
-              <TableHeaderCell className="text-right">Costs</TableHeaderCell>
-              <TableHeaderCell className="text-right">Last edited</TableHeaderCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
+      <Table className="mt-8">
+        <Table.Root>
+          <Table.Head>
+            <Table.Row>
+              <Table.HeaderCell>Workspace</Table.HeaderCell>
+              <Table.HeaderCell>Owner</Table.HeaderCell>
+              <Table.HeaderCell>Status</Table.HeaderCell>
+              <Table.HeaderCell>Region</Table.HeaderCell>
+              <Table.HeaderCell>Capacity</Table.HeaderCell>
+              <Table.HeaderCell className="text-right">Costs</Table.HeaderCell>
+              <Table.HeaderCell className="text-right">Last edited</Table.HeaderCell>
+            </Table.Row>
+          </Table.Head>
+          <Table.Body>
             {data.map(item => (
-              <TableRow key={item.workspace}>
-                <TableCell>{item.workspace}</TableCell>
-                <TableCell>{item.owner}</TableCell>
-                <TableCell>
+              <Table.Row key={item.workspace}>
+                <Table.Cell>{item.workspace}</Table.Cell>
+                <Table.Cell>{item.owner}</Table.Cell>
+                <Table.Cell>
                   <Badge variant={item.status === 'Inactive' ? 'warning' : 'primary'}>
                     {item.status}
                   </Badge>
-                </TableCell>
-                <TableCell>{item.region}</TableCell>
-                <TableCell>{item.capacity}</TableCell>
-                <TableCell className="text-right">{item.costs}</TableCell>
-                <TableCell className="text-right">{item.lastEdited}</TableCell>
-              </TableRow>
+                </Table.Cell>
+                <Table.Cell>{item.region}</Table.Cell>
+                <Table.Cell>{item.capacity}</Table.Cell>
+                <Table.Cell className="text-right">{item.costs}</Table.Cell>
+                <Table.Cell className="text-right">{item.lastEdited}</Table.Cell>
+              </Table.Row>
             ))}
-          </TableBody>
-        </Table>
-      </TableRoot>
+          </Table.Body>
+        </Table.Root>
+      </Table>
     )
   },
 }
