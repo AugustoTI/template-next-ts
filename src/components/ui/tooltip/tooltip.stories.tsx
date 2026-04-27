@@ -1,6 +1,7 @@
 import { type Meta, type StoryObj } from '@storybook/nextjs'
 
 import { Tooltip } from '.'
+import { Button } from '../button'
 
 export default {
   title: 'UI/Tooltip',
@@ -13,9 +14,7 @@ export const Default: Story = {
   render() {
     return (
       <Tooltip>
-        <Tooltip.Trigger className="rounded-md bg-base-900 px-3 py-1.5 text-sm text-base-50">
-          Hover me
-        </Tooltip.Trigger>
+        <Tooltip.Trigger render={Button}>Hover me</Tooltip.Trigger>
         <Tooltip.Portal>
           <Tooltip.Positioner>
             <Tooltip.Content>
