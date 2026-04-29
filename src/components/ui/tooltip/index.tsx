@@ -12,7 +12,7 @@ const TooltipViewport = TooltipPrimitive.Viewport
 
 function TooltipPositioner({
   side = 'top',
-  sideOffset = 4,
+  sideOffset = 7,
   align = 'center',
   alignOffset = 0,
   ...props
