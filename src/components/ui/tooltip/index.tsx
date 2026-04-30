@@ -62,4 +62,5 @@ export const Tooltip = Object.assign(TooltipRoot, {
   Content: TooltipContent,
   Portal: TooltipPortal,
   Viewport: TooltipViewport,
+  Provider: TooltipPrimitive.Provider,
 })

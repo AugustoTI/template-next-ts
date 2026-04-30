@@ -11,15 +11,7 @@ function TableContainer({ className, ...props }: React.ComponentProps<'div'>) {
 }
 
 function TableRoot({ className, ...props }: React.ComponentProps<'table'>) {
-  return (
-    <table
-      className={cn(
-        'w-full caption-bottom border-b border-base-200 dark:border-base-800',
-        className,
-      )}
-      {...props}
-    />
-  )
+  return <table className={cn('w-full caption-bottom', className)} {...props} />
 }
 
 function TableHead({ ...props }: React.ComponentProps<'thead'>) {

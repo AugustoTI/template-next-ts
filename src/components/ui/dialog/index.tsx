@@ -64,7 +64,10 @@ function DialogDescription({
 }: React.ComponentProps<typeof DialogPrimitive.Description>) {
   return (
     <DialogPrimitive.Description
-      className={cn('text-balance text-base-500 sm:text-pretty', className)}
+      className={cn(
+        'text-balance text-base-500 sm:text-pretty dark:text-base-400',
+        className,
+      )}
       {...props}
     />
   )
