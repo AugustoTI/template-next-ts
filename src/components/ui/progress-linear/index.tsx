@@ -1,6 +1,8 @@
 import { Progress as ProgressPrimitive } from '@base-ui/react/progress'
 import { cn } from 'tailwind-variants'
 
+import { labelStyle } from '../field'
+
 function ProgressLinearRoot({
   className,
   children,
@@ -26,15 +28,7 @@ function ProgressLinearLabel({
   className,
   ...props
 }: ProgressPrimitive.Label.Props): React.ReactElement {
-  return (
-    <ProgressPrimitive.Label
-      className={cn(
-        'flex items-center gap-2 text-sm leading-none font-medium text-base-900 data-disabled:pointer-events-none data-disabled:text-base-400 data-disabled:opacity-50 dark:text-base-50',
-        className,
-      )}
-      {...props}
-    />
-  )
+  return <ProgressPrimitive.Label className={cn(labelStyle(), className)} {...props} />
 }
 
 function ProgressLinearTrack({

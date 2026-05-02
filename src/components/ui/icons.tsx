@@ -1,4 +1,5 @@
 import {
+  LuAsterisk,
   LuBox,
   LuCalendar,
   LuCheck,
@@ -30,6 +31,7 @@ import {
 
 export const Icons = {
   Star: LuStar,
+  Asterisk: LuAsterisk,
   Box: LuBox,
   Check: LuCheck,
   Minus: LuMinus,
