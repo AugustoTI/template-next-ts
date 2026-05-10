@@ -3,7 +3,7 @@ import { cn } from 'tailwind-variants'
 
 function PopoverPositioner({
   className,
-  sideOffset = 4,
+  sideOffset = 10,
   alignOffset = 0,
   ...props
 }: React.ComponentProps<typeof PopoverPrimitive.Positioner>) {
@@ -23,7 +23,12 @@ interface PopoverContentProps extends React.ComponentProps<
   showArrow?: boolean
 }
 
-function PopoverContent({ className, ...props }: PopoverContentProps) {
+function PopoverContent({
+  className,
+  showArrow = true,
+  children,
+  ...props
+}: PopoverContentProps) {
   return (
     <PopoverPrimitive.Popup
       className={cn(
@@ -32,7 +37,10 @@ function PopoverContent({ className, ...props }: PopoverContentProps) {
         className,
       )}
       {...props}
-    />
+    >
+      {showArrow && <PopoverArrow />}
+      {children}
+    </PopoverPrimitive.Popup>
   )
 }
 
@@ -41,6 +49,27 @@ function PopoverTitle({
   ...props
 }: React.ComponentProps<typeof PopoverPrimitive.Title>) {
   return <PopoverPrimitive.Title className={cn('font-medium', className)} {...props} />
+}
+
+function PopoverArrow({
+  className,
+  ...props
+}: React.ComponentProps<typeof PopoverPrimitive.Arrow>) {
+  return (
+    <PopoverPrimitive.Arrow
+      className={cn(
+        'size-2.5 rotate-45 border-base-200 bg-white dark:border-base-800 dark:bg-base-800',
+        [
+          'data-[side=bottom]:-top-1.5 data-[side=bottom]:border-t data-[side=bottom]:border-l',
+          'data-[side=top]:-bottom-1.5 data-[side=top]:border-r data-[side=top]:border-b',
+          'data-[side=left]:-right-1.5 data-[side=left]:border-t data-[side=left]:border-r',
+          'data-[side=right]:-left-1.5 data-[side=right]:border-b data-[side=right]:border-l',
+        ],
+        className,
+      )}
+      {...props}
+    />
+  )
 }
 
 export const Popover = Object.assign(PopoverPrimitive.Root, {
@@ -53,4 +82,5 @@ export const Popover = Object.assign(PopoverPrimitive.Root, {
   Close: PopoverPrimitive.Close,
   Title: PopoverTitle,
   Description: PopoverPrimitive.Description,
+  Arrow: PopoverArrow,
 })
