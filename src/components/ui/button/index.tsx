@@ -1,5 +1,5 @@
 import { Button as ButtonPrimitive } from '@base-ui/react/button'
-import { tv, VariantProps } from 'tailwind-variants'
+import { cn, tv, VariantProps } from 'tailwind-variants'
 
 import { Icons } from '../icons'
 
@@ -65,11 +65,12 @@ export function Button({
   children,
   variant = 'primary',
   size = 'md',
+  className,
   ...props
 }: ButtonProps) {
   return (
     <ButtonPrimitive
-      className={buttonVariantStyles({ variant, size })}
+      className={cn(buttonVariantStyles({ variant, size }), className)}
       disabled={loading || disabled}
       {...props}
     >
