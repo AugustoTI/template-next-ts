@@ -13,7 +13,7 @@ export const Default: Story = {
   render() {
     return (
       <Dialog>
-        <Dialog.Trigger render={Button}>Open Dialog</Dialog.Trigger>
+        <Dialog.Trigger render={<Button />}>Open Dialog</Dialog.Trigger>
         <Dialog.Portal>
           <Dialog.Backdrop />
           <Dialog.Viewport>
@@ -23,7 +23,7 @@ export const Default: Story = {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia labore nobis
                 unde ex excepturi laboriosam!
               </Dialog.Description>
-              <Dialog.Close render={Button}>Close</Dialog.Close>
+              <Dialog.Close render={<Button />}>Close</Dialog.Close>
             </Dialog.Content>
           </Dialog.Viewport>
         </Dialog.Portal>

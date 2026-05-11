@@ -50,7 +50,7 @@ function NumberInputIncrement({ ...props }: NumberField.Increment.Props) {
 function NumberInputElement({ className, ...props }: NumberField.Input.Props) {
   return (
     <NumberField.Input
-      render={Input}
+      render={<Input />}
       className={cn('rounded-l-none rounded-r-none text-center', className)}
       {...props}
     />

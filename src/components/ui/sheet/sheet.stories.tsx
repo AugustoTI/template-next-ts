@@ -13,7 +13,7 @@ export const Default: Story = {
   render() {
     return (
       <Sheet>
-        <Sheet.Trigger render={Button}>Open Sheet</Sheet.Trigger>
+        <Sheet.Trigger render={<Button />}>Open Sheet</Sheet.Trigger>
         <Sheet.Portal>
           <Sheet.Backdrop />
           <Sheet.Content>

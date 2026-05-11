@@ -43,7 +43,7 @@ export const Default: Story = {
           </Field>
           <Field>
             <Field.Label>Textarea</Field.Label>
-            <Field.Control render={Textarea} />
+            <Field.Control render={<Textarea />} />
           </Field>
         </div>
         <div>

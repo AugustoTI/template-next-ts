@@ -15,7 +15,7 @@ export const Default: Story = {
     return (
       <div className="absolute inset-0 flex h-dvh items-center justify-center">
         <Popover>
-          <Popover.Trigger render={Button}>Open Popover</Popover.Trigger>
+          <Popover.Trigger render={<Button />}>Open Popover</Popover.Trigger>
           <Popover.Portal>
             <Popover.Positioner>
               <Popover.Content>

@@ -17,7 +17,7 @@ export const Default: Story = {
       <Tooltip.Provider>
         <div className="flex items-center gap-2">
           <Tooltip>
-            <Tooltip.Trigger render={Button}>Hover me</Tooltip.Trigger>
+            <Tooltip.Trigger render={<Button />}>Hover me</Tooltip.Trigger>
             <Tooltip.Portal>
               <Tooltip.Positioner>
                 <Tooltip.Content>
