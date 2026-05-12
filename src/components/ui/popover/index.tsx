@@ -38,7 +38,11 @@ function PopoverContent({
       )}
       {...props}
     >
-      {showArrow && <PopoverArrow />}
+      {showArrow && (
+        <PopoverPrimitive.Arrow className="flex data-[side=bottom]:-top-2.25 data-[side=left]:-right-3.5 data-[side=left]:rotate-90 data-[side=right]:-left-3.5 data-[side=right]:-rotate-90 data-[side=top]:-bottom-2.25 data-[side=top]:rotate-180">
+          <ArrowSvg />
+        </PopoverPrimitive.Arrow>
+      )}
       {children}
     </PopoverPrimitive.Popup>
   )
@@ -51,24 +55,18 @@ function PopoverTitle({
   return <PopoverPrimitive.Title className={cn('font-medium', className)} {...props} />
 }
 
-function PopoverArrow({
-  className,
-  ...props
-}: React.ComponentProps<typeof PopoverPrimitive.Arrow>) {
+function ArrowSvg(props: React.ComponentProps<'svg'>) {
   return (
-    <PopoverPrimitive.Arrow
-      className={cn(
-        'size-2.5 rotate-45 border-base-200 bg-white dark:border-base-800 dark:bg-base-800',
-        [
-          'data-[side=bottom]:-top-1.5 data-[side=bottom]:border-t data-[side=bottom]:border-l',
-          'data-[side=top]:-bottom-1.5 data-[side=top]:border-r data-[side=top]:border-b',
-          'data-[side=left]:-right-1.5 data-[side=left]:border-t data-[side=left]:border-r',
-          'data-[side=right]:-left-1.5 data-[side=right]:border-b data-[side=right]:border-l',
-        ],
-        className,
-      )}
-      {...props}
-    />
+    <svg width="20" height="10" viewBox="0 0 20 10" fill="none" {...props}>
+      <path
+        d="M9.66437 2.60207L4.80758 6.97318C4.07308 7.63423 3.11989 8 2.13172 8H0V10H20V8H18.5349C17.5468 8 16.5936 7.63423 15.8591 6.97318L11.0023 2.60207C10.622 2.2598 10.0447 2.25979 9.66437 2.60207Z"
+        className="fill-white dark:fill-base-950"
+      />
+      <path
+        d="M10.3333 3.34539L5.47654 7.71648C4.55842 8.54279 3.36693 9 2.13172 9H0V8H2.13172C3.11989 8 4.07308 7.63423 4.80758 6.97318L9.66437 2.60207C10.0447 2.25979 10.622 2.2598 11.0023 2.60207L15.8591 6.97318C16.5936 7.63423 17.5468 8 18.5349 8H20V9H18.5349C17.2998 9 16.1083 8.54278 15.1901 7.71648L10.3333 3.34539Z"
+        className="fill-base-200 dark:fill-base-800"
+      />
+    </svg>
   )
 }
 
@@ -82,5 +80,4 @@ export const Popover = Object.assign(PopoverPrimitive.Root, {
   Close: PopoverPrimitive.Close,
   Title: PopoverTitle,
   Description: PopoverPrimitive.Description,
-  Arrow: PopoverArrow,
 })
