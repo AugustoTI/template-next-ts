@@ -3,7 +3,7 @@ import { type Meta, type StoryObj } from '@storybook/nextjs'
 import { Slider } from '.'
 
 export default {
-  title: 'Slider',
+  title: 'UI/Slider',
 } satisfies Meta
 
 type Story = StoryObj

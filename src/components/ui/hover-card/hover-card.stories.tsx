@@ -5,7 +5,7 @@ import { HoverCard } from '.'
 import { Button } from '../button'
 
 export default {
-  title: 'HoverCard',
+  title: 'UI/HoverCard',
 } satisfies Meta
 
 type Story = StoryObj
