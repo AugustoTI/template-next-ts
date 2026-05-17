@@ -1,6 +1,6 @@
 import '~/styles/global.css'
 
-import { ThemeProvider } from '~/providers/theme-provider'
+import { ThemeProvider } from '@wrksz/themes/next'
 import { type Metadata } from 'next'
 
 import { Tooltip } from '~/components/ui/tooltip'
