@@ -64,10 +64,18 @@
   --color-warning-800: var(--warning-800);
   --color-warning-900: var(--warning-900);
   --color-warning-950: var(--warning-950);
+
+  --animate-skeleton: skeleton 1.7s -1s infinite linear;
 }
 
 @layer base {
   body {
     @apply bg-white text-base-950 dark:bg-base-950 dark:text-base-50;
+  }
+}
+
+@keyframes skeleton {
+  to {
+    background-position: -200% 0;
   }
 }
