@@ -38,24 +38,30 @@ const australiaPacific = [
   { label: 'Australian Central Standard Time', value: 'acst' },
   { label: 'Australian Eastern Standard Time', value: 'aest' },
   { label: 'New Zealand Standard Time', value: 'nzst' },
-  {
-    label: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, suscipit?',
-    value: 'abc',
-  },
   { label: 'Fiji Time', value: 'fjt' },
 ]
+
 const southAmerica = [
   { label: 'Argentina Time', value: 'art' },
   { label: 'Bolivia Time', value: 'bot' },
   { label: 'Brasilia Time', value: 'brt' },
   { label: 'Chile Standard Time', value: 'clt' },
 ]
+
+const others = [
+  {
+    label: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, suscipit?',
+    value: 'abc',
+  },
+]
+
 const items = [
   ...northAmerica,
   ...europeAfrica,
   ...asia,
   ...australiaPacific,
   ...southAmerica,
+  ...others,
 ]
 
 export const Default: Story = {
@@ -104,6 +110,14 @@ export const Default: Story = {
               <Select.Group>
                 <Select.Label>South America</Select.Label>
                 {southAmerica.map(item => (
+                  <Select.Item key={item.value} value={item.value}>
+                    {item.label}
+                  </Select.Item>
+                ))}
+              </Select.Group>
+              <Select.Group>
+                <Select.Label>Others</Select.Label>
+                {others.map(item => (
                   <Select.Item key={item.value} value={item.value}>
                     {item.label}
                   </Select.Item>

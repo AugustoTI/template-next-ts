@@ -42,8 +42,8 @@ function MenuItem({ className, ...props }: MenuPrimitive.Item.Props) {
     <MenuPrimitive.Item
       className={cn(
         'flex min-h-8 cursor-default items-center gap-2 px-2 py-1 text-base-900 outline-none select-none sm:min-h-7 sm:text-sm dark:text-base-50 [&>svg]:pointer-events-none [&>svg]:-mx-0.5 [&>svg]:shrink-0 [&>svg:not([class*="opacity-"])]:opacity-80 [&>svg:not([class*="size-"])]:size-4.5 sm:[&>svg:not([class*="size-"])]:size-4',
-        'data-disabled:pointer-events-none data-disabled:opacity-64',
-        'data-highlighted:bg-base-300 dark:data-highlighted:bg-base-800',
+        'data-disabled:pointer-events-none data-disabled:text-base-400 data-disabled:data-highlighted:bg-base-200 dark:data-disabled:text-base-600 dark:data-disabled:data-highlighted:bg-base-900',
+        'not-data-disabled:data-highlighted:bg-base-300 dark:not-data-disabled:data-highlighted:bg-base-800',
         className,
       )}
       {...props}

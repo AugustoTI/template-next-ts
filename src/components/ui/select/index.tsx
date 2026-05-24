@@ -59,7 +59,7 @@ function SelectContent({
         <SelectPrimitive.Popup
           data-align-trigger={alignItemWithTrigger}
           className={cn(
-            'relative isolate z-50 w-(--anchor-width) min-w-36 origin-(--transform-origin) rounded-md border border-base-300 bg-white text-base-900 shadow-xs data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-[align-trigger=true]:animate-none data-[side=bottom]:slide-in-from-top-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 dark:border-base-800 dark:bg-base-950 dark:text-base-50',
+            'relative isolate z-50 w-(--anchor-width) min-w-48 origin-(--transform-origin) rounded-md border border-base-300 bg-white text-base-900 shadow-xs data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-[align-trigger=true]:animate-none data-[side=bottom]:slide-in-from-top-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 dark:border-base-800 dark:bg-base-950 dark:text-base-50',
             className,
           )}
           {...props}
@@ -77,7 +77,7 @@ function SelectList({ className, ...props }: SelectPrimitive.List.Props) {
   return (
     <SelectPrimitive.List
       className={cn(
-        'relative max-h-(--available-height) scroll-pt-9 scroll-pb-6 overflow-y-auto py-1',
+        'relative max-h-(--available-height) scroll-pt-9 scroll-pb-6 overflow-y-auto',
         className,
       )}
       {...props}
@@ -89,7 +89,7 @@ function SelectLabel({ className, ...props }: SelectPrimitive.GroupLabel.Props) 
   return (
     <SelectPrimitive.GroupLabel
       className={cn(
-        'px-3 py-2 text-xs font-medium tracking-wide text-base-500',
+        'px-2 py-1.5 text-xs font-medium text-base-500 dark:text-base-400',
         className,
       )}
       {...props}
@@ -100,7 +100,10 @@ function SelectItem({ className, children, ...props }: SelectPrimitive.Item.Prop
   return (
     <SelectPrimitive.Item
       className={cn(
-        "grid cursor-default grid-cols-[1fr_1rem] items-center gap-2 py-2 pr-4 pl-3 text-sm outline-none select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-highlighted:bg-base-200 data-selected:font-bold dark:data-highlighted:bg-base-900 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        'grid min-h-8 cursor-default grid-cols-[1fr_1rem] items-center gap-2 px-2 py-1 pr-4 text-sm outline-none select-none data-selected:font-bold sm:min-h-7',
+        '[&_svg]:pointer-events-none',
+        'data-disabled:pointer-events-none data-disabled:text-base-400 data-disabled:data-highlighted:bg-base-200 dark:data-disabled:text-base-600 dark:data-disabled:data-highlighted:bg-base-900',
+        'not-data-disabled:data-highlighted:bg-base-300 dark:not-data-disabled:data-highlighted:bg-base-800',
         className,
       )}
       {...props}
@@ -110,8 +113,8 @@ function SelectItem({ className, children, ...props }: SelectPrimitive.Item.Prop
       </SelectPrimitive.ItemText>
       <SelectPrimitive.ItemIndicator
         render={
-          <span className="pointer-events-none flex size-4 items-center justify-center">
-            <Icons.Check aria-hidden className="pointer-events-none" />
+          <span className="pointer-events-none flex items-center justify-center">
+            <Icons.Check aria-hidden className="pointer-events-none size-4.5 sm:size-4" />
           </span>
         }
       />
@@ -122,10 +125,7 @@ function SelectItem({ className, children, ...props }: SelectPrimitive.Item.Prop
 function SelectSeparator({ className, ...props }: SelectPrimitive.Separator.Props) {
   return (
     <SelectPrimitive.Separator
-      className={cn(
-        'pointer-events-none -mx-1 my-1 h-px bg-base-300 dark:bg-base-700',
-        className,
-      )}
+      className={cn('pointer-events-none h-px bg-base-300 dark:bg-base-700', className)}
       {...props}
     />
   )
@@ -137,7 +137,7 @@ function SelectScrollUpButton({
   return (
     <SelectPrimitive.ScrollUpArrow
       className={cn(
-        "top-0 z-10 flex w-full cursor-default items-center justify-center rounded-md bg-white py-1 dark:bg-base-950 [&_svg:not([class*='size-'])]:size-4",
+        "top-0 z-10 flex min-h-8 w-full cursor-default items-center justify-center rounded-md bg-white sm:min-h-7 dark:bg-base-950 [&_svg:not([class*='size-'])]:size-4",
         className,
       )}
       {...props}
@@ -154,7 +154,7 @@ function SelectScrollDownButton({
   return (
     <SelectPrimitive.ScrollDownArrow
       className={cn(
-        "bottom-0 z-10 flex w-full cursor-default items-center justify-center rounded-md bg-white py-1 dark:bg-base-950 [&_svg:not([class*='size-'])]:size-4",
+        "bottom-0 z-10 flex min-h-8 w-full cursor-default items-center justify-center rounded-md bg-white sm:min-h-7 dark:bg-base-950 [&_svg:not([class*='size-'])]:size-4",
         className,
       )}
       {...props}

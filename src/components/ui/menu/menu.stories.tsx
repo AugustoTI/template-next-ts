@@ -68,8 +68,9 @@ export const WithSubmenu: Story = {
           <Menu.Positioner>
             <Menu.Content>
               <Menu.Item>Item 1</Menu.Item>
+              <Menu.Item>Item 2</Menu.Item>
               <Menu.Submenu>
-                <Menu.SubTrigger>Submenu</Menu.SubTrigger>
+                <Menu.SubTrigger>More items</Menu.SubTrigger>
                 <Menu.Portal>
                   <Menu.Positioner sideOffset={4} align="start" side="right">
                     <Menu.Content>
@@ -80,7 +81,6 @@ export const WithSubmenu: Story = {
                   </Menu.Positioner>
                 </Menu.Portal>
               </Menu.Submenu>
-              <Menu.Item>Item 2</Menu.Item>
             </Menu.Content>
           </Menu.Positioner>
         </Menu.Portal>
