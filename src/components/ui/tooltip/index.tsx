@@ -11,7 +11,7 @@ const TooltipPortal = TooltipPrimitive.Portal
 const TooltipViewport = TooltipPrimitive.Viewport
 
 function TooltipPositioner({
-  side = 'top',
+  side = 'bottom',
   sideOffset = 10,
   align = 'center',
   alignOffset = 0,
