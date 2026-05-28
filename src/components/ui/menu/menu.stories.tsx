@@ -88,3 +88,42 @@ export const WithSubmenu: Story = {
     )
   },
 }
+
+export const WithCheckboxes: Story = {
+  render() {
+    return (
+      <Menu>
+        <Menu.Trigger render={<Button />}>Open Menu</Menu.Trigger>
+        <Menu.Portal>
+          <Menu.Positioner>
+            <Menu.Content>
+              <Menu.CheckboxItem checked>Checked Item</Menu.CheckboxItem>
+              <Menu.CheckboxItem>Unchecked Item</Menu.CheckboxItem>
+            </Menu.Content>
+          </Menu.Positioner>
+        </Menu.Portal>
+      </Menu>
+    )
+  },
+}
+
+export const WithRadioItems: Story = {
+  render() {
+    return (
+      <Menu>
+        <Menu.Trigger render={<Button />}>Open Menu</Menu.Trigger>
+        <Menu.Portal>
+          <Menu.Positioner>
+            <Menu.Content>
+              <Menu.RadioGroup>
+                <Menu.RadioItem value="light">Light</Menu.RadioItem>
+                <Menu.RadioItem value="dark">Dark</Menu.RadioItem>
+                <Menu.RadioItem value="system">System</Menu.RadioItem>
+              </Menu.RadioGroup>
+            </Menu.Content>
+          </Menu.Positioner>
+        </Menu.Portal>
+      </Menu>
+    )
+  },
+}
