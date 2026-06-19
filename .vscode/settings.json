@@ -4,6 +4,7 @@
   },
   "editor.formatOnSave": true,
   "tailwindCSS.classFunctions": ["cn", "tv"],
+  "tailwindCSS.classAttributes": ["className", "classNames"],
   "editor.quickSuggestions": {
     "strings": "on"
   },
