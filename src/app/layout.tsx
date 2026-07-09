@@ -3,8 +3,6 @@ import '~/styles/global.css'
 import { ThemeProvider } from '@wrksz/themes/next'
 import { type Metadata } from 'next'
 
-import { Tooltip } from '~/components/ui/tooltip'
-
 export const metadata: Metadata = {
   title: 'Create Next App',
   description: 'This site was created using the NextJS framework 🚀',
@@ -21,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem
           disableTransitionOnChange
         >
-          <Tooltip.Provider>{children}</Tooltip.Provider>
+          {children}
         </ThemeProvider>
       </body>
     </html>

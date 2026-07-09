@@ -1,3 +1,4 @@
+// @ts-expect-error: Loading global.css in Storybook for tailwind styles
 import '../src/styles/global.css'
 
 import { withThemeByClassName } from '@storybook/addon-themes'
