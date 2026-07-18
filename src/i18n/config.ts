@@ -18,7 +18,6 @@ const i18nConfig: I18nConfig = {
   supportedLngs: ['pt-BR'],
   fallbackLng: 'pt-BR',
   localeInPath: false,
-  ns: ['home', 'common'],
   resourceLoader: resourceLoader,
   reloadOnPrerender: env.NODE_ENV === 'development',
 }

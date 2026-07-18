@@ -103,6 +103,36 @@ import via `~/...`, never relative paths across top-level `src` folders.
   there's a proven need.
 - Imports `~/config/env` at the top for build-time env validation.
 
+### Internationalization (i18n)
+
+`i18next` + `react-i18next`, integrated with the App Router via `next-i18next` (the App
+Router-oriented rewrite, with `next-i18next/server`, `next-i18next/client`, and
+`next-i18next/proxy` entrypoints — not the legacy Pages Router `next-i18next`).
+
+- `src/i18n/config.ts` — `i18nConfig`: `supportedLngs` (currently only `pt-BR`),
+  `fallbackLng` and a `resourceLoader` that reads JSON from disk in dev (`fs/promises`)
+  vs. dynamic `import()` in production.
+- `src/i18n/locales/<locale>/<namespace>.json` — translation files, one per locale +
+  namespace (e.g. `src/i18n/locales/pt-BR/home.json`).
+- `src/i18n/resource-type.ts` — builds the `Resources` type from imported namespace JSONs;
+  `src/@types/i18next.d.ts` augments `i18next`'s `CustomTypeOptions.resources` with it so
+  `t()` keys are typed/autocompleted.
+- `src/proxy.ts` — Next.js `proxy.ts` (the file-convention successor to `middleware.ts`)
+  calling `createProxy(i18nConfig)` from `next-i18next/proxy`; `matcher` excludes `api`,
+  `_next/static`, `_next/image`, `assets`, and static public files.
+- `src/app/layout.tsx` calls `initServerI18next(i18nConfig)` at module scope, is an
+  `async` Server Component that resolves `{ i18n, lng }` via `getT()`, builds `resources`
+  with `getResources(i18n)`, and wraps children in
+  `<I18nProvider language={lng} resources={resources}>` (from `next-i18next/client`) —
+  `<html lang={lng}>` is dynamic, not a hardcoded `"pt-BR"` anymore.
+- Server Components/pages get a typed, namespaced `t` via
+  `const { t } = await getT('namespace')` (see `src/app/page.tsx`).
+
+**Never hardcode user-facing copy** — add the key to the relevant namespace JSON and call
+`t('key')`. Adding a new namespace requires updating three places: the locale JSON file,
+the `ns` array in `src/i18n/config.ts`, and the `_resources` object in
+`src/i18n/resource-type.ts` (otherwise `t()` won't be typed for it)
+
 ### Testing
 
 - Jest + `@testing-library/react` + `@happy-dom/jest-environment` (not jsdom).
@@ -121,12 +151,13 @@ Config in `.storybook/main.ts`: stories are any `src/**/*.stories.@(js|jsx|mjs|t
 - No semicolons, single quotes, trailing commas everywhere, 90-char print width,
   `arrowParens: avoid` (Prettier).
 - Import order is enforced by `@ianvs/prettier-plugin-sort-imports`: React → Next →
-  (blank) → `types` → `~/types` → `~/configs` → `~/lib` → `~/utils` → `~/actions` →
-  `~/hooks` → `~/components/ui` → `~/components` → `~/assets` → (blank) → relative
-  imports.
+  (blank) → `types` → `~/types` → `~/configs` → `~/i18n` → `~/lib` → `~/utils` →
+  `~/actions` → `~/hooks` → `~/components/ui` → `~/components` → `~/assets` → (blank) →
+  relative imports.
 - ESLint flat config (`eslint.config.mjs`) combines `typescript-eslint`,
   `eslint-config-next/core-web-vitals`, `react`/`react-hooks` recommended, and
   `eslint-plugin-storybook`. Unused vars/args/catch bindings prefixed with `_` are
   allowed.
-- App content/UI copy is in **pt-BR** (e.g. `src/app/page.tsx`, `layout.tsx`
-  `lang="pt-BR"`) — match this unless told otherwise.
+- App content/UI copy is in **pt-BR** (only locale in `i18nConfig.supportedLngs`) — match
+  this unless told otherwise, and route it through the i18n `t()` function rather than
+  hardcoded JSX strings (see [Internationalization (i18n)](#internationalization-i18n)).
