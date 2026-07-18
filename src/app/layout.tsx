@@ -1,7 +1,18 @@
 import '~/styles/global.css'
 
-import { ThemeProvider } from '~/providers/theme-provider'
+import { ThemeProvider } from '@wrksz/themes/next'
+import { i18nConfig } from '~/i18n/config'
+import { I18nProvider } from 'next-i18next/client'
+import { getResources, getT, initServerI18next } from 'next-i18next/server'
 import { type Metadata } from 'next'
+import { Geist, Roboto } from 'next/font/google'
+
+import { cn } from '~/utils/cn'
+
+initServerI18next(i18nConfig)
+
+const geistHeading = Geist({ subsets: ['latin'], variable: '--font-heading' })
+const roboto = Roboto({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -9,18 +20,27 @@ export const metadata: Metadata = {
   generator: 'NextJS',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const { i18n, lng } = await getT()
+  const resources = getResources(i18n)
+
   return (
-    <html lang="pt-BR" className="antialiased" suppressHydrationWarning>
+    <html
+      lang={lng}
+      className={cn('antialiased', 'font-sans', roboto.variable, geistHeading.variable)}
+      suppressHydrationWarning
+    >
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <I18nProvider language={lng} resources={resources}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </I18nProvider>
       </body>
     </html>
   )

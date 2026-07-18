@@ -10,7 +10,7 @@
   "trailingComma": "all",
   "endOfLine": "lf",
   "plugins": ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
-  "tailwindFunctions": ["cn", "tv"],
+  "tailwindFunctions": ["cn", "cva"],
   "tailwindStylesheet": "./src/styles/global.css",
   "importOrder": [
     "^(react/(.*)$)|^(react$)",
@@ -19,6 +19,7 @@
     "^types$",
     "^~/types/(.*)$",
     "^~/configs/(.*)$",
+    "^~/i18n/(.*)$",
     "^~/lib/(.*)$",
     "^~/utils/(.*)$",
     "^~/actions/(.*)$",

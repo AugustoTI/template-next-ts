@@ -3,13 +3,14 @@
     "soucer.fixAll.eslint": "explicit"
   },
   "editor.formatOnSave": true,
-  "tailwindCSS.classFunctions": ["cn", "tv"],
+  "tailwindCSS.classFunctions": ["cn", "cva"],
+  "tailwindCSS.classAttributes": ["className", "classNames"],
   "editor.quickSuggestions": {
     "strings": "on"
   },
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "i18n-ally.localesPaths": ["messages", "src/i18n"]
+  "i18n-ally.localesPaths": ["messages", "src/i18n"],
+  "js/ts.tsdk.path": "node_modules/typescript/lib"
 }

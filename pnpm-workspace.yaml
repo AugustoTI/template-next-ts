@@ -1,12 +1,45 @@
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - '@swc/core'
-  - '@tailwindcss/oxide'
-  - core-js-pure
-  - esbuild
-  - lefthook
-  - msw
-  - sharp
-  - unrs-resolver
-
-sideEffectsCache: false
+allowBuilds:
+  core-js-pure: true
+  esbuild: true
+  lefthook: true
+  msw: true
+  sharp: true
+  unrs-resolver: true
+minimumReleaseAgeExclude:
+  - '@commitlint/cli@21.2.1'
+  - '@commitlint/read@21.2.1'
+  - '@types/node@26.1.1'
+  - '@typescript/typescript-aix-ppc64@6.0.3'
+  - '@typescript/typescript-darwin-arm64@6.0.3'
+  - '@typescript/typescript-darwin-x64@6.0.3'
+  - '@typescript/typescript-freebsd-arm64@6.0.3'
+  - '@typescript/typescript-freebsd-x64@6.0.3'
+  - '@typescript/typescript-linux-arm64@6.0.3'
+  - '@typescript/typescript-linux-arm@6.0.3'
+  - '@typescript/typescript-linux-loong64@6.0.3'
+  - '@typescript/typescript-linux-mips64el@6.0.3'
+  - '@typescript/typescript-linux-ppc64@6.0.3'
+  - '@typescript/typescript-linux-riscv64@6.0.3'
+  - '@typescript/typescript-linux-s390x@6.0.3'
+  - '@typescript/typescript-linux-x64@6.0.3'
+  - '@typescript/typescript-netbsd-arm64@6.0.3'
+  - '@typescript/typescript-netbsd-x64@6.0.3'
+  - '@typescript/typescript-openbsd-arm64@6.0.3'
+  - '@typescript/typescript-openbsd-x64@6.0.3'
+  - '@typescript/typescript-sunos-x64@6.0.3'
+  - '@typescript/typescript-win32-arm64@6.0.3'
+  - '@typescript/typescript-win32-x64@6.0.3'
+  - lefthook-darwin-arm64@2.1.10
+  - lefthook-darwin-x64@2.1.10
+  - lefthook-freebsd-arm64@2.1.10
+  - lefthook-freebsd-x64@2.1.10
+  - lefthook-linux-arm64@2.1.10
+  - lefthook-linux-x64@2.1.10
+  - lefthook-openbsd-arm64@2.1.10
+  - lefthook-openbsd-x64@2.1.10
+  - lefthook-windows-arm64@2.1.10
+  - lefthook-windows-x64@2.1.10
+  - lefthook@2.1.10
+  - msw@2.15.0
+  - typescript@6.0.3
+  - shadcn@4.13.1

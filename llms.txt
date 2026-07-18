@@ -1,321 +1,94 @@
-# OVERVIEW
+# Base UI
 
-- [Getting Started](https://ark-ui.com/react/docs/overview/getting-started)
-- [Getting Started](https://ark-ui.com/vue/docs/overview/getting-started)
-- [Getting Started](https://ark-ui.com/svelte/docs/overview/getting-started)
-- [Getting Started](https://ark-ui.com/solid/docs/overview/getting-started)
-- [Changelog](https://ark-ui.com/react/docs/overview/changelog)
-- [Changelog](https://ark-ui.com/vue/docs/overview/changelog)
-- [Changelog](https://ark-ui.com/svelte/docs/overview/changelog)
-- [Changelog](https://ark-ui.com/solid/docs/overview/changelog)
-- [About](https://ark-ui.com/react/docs/overview/about)
-- [About](https://ark-ui.com/vue/docs/overview/about)
-- [About](https://ark-ui.com/svelte/docs/overview/about)
-- [About](https://ark-ui.com/solid/docs/overview/about)
+This is the documentation for the `@base-ui/react` package.
+It contains a collection of components and utilities for building user interfaces in React.
+The library is designed to be composable and styling agnostic.
+The Tailwind CSS examples are written for Tailwind CSS v4. If `package.json` uses Tailwind CSS v3, automatically convert unsupported styles to v3-compatible equivalents.
 
-# GUIDES
+## Overview
 
-- [Styling](https://ark-ui.com/react/docs/guides/styling)
-- [Styling](https://ark-ui.com/vue/docs/guides/styling)
-- [Styling](https://ark-ui.com/svelte/docs/guides/styling)
-- [Styling](https://ark-ui.com/solid/docs/guides/styling)
-- [Composition](https://ark-ui.com/react/docs/guides/composition)
-- [Composition](https://ark-ui.com/vue/docs/guides/composition)
-- [Composition](https://ark-ui.com/svelte/docs/guides/composition)
-- [Composition](https://ark-ui.com/solid/docs/guides/composition)
-- [Component State](https://ark-ui.com/react/docs/guides/component-state)
-- [Component State](https://ark-ui.com/vue/docs/guides/component-state)
-- [Component State](https://ark-ui.com/svelte/docs/guides/component-state)
-- [Component State](https://ark-ui.com/solid/docs/guides/component-state)
-- [Animation](https://ark-ui.com/react/docs/guides/animation)
-- [Animation](https://ark-ui.com/vue/docs/guides/animation)
-- [Animation](https://ark-ui.com/svelte/docs/guides/animation)
-- [Animation](https://ark-ui.com/solid/docs/guides/animation)
-- [Forms](https://ark-ui.com/react/docs/guides/forms)
-- [Forms](https://ark-ui.com/vue/docs/guides/forms)
-- [Forms](https://ark-ui.com/svelte/docs/guides/forms)
-- [Forms](https://ark-ui.com/solid/docs/guides/forms)
-- [Refs](https://ark-ui.com/react/docs/guides/ref)
-- [Refs](https://ark-ui.com/vue/docs/guides/ref)
-- [Refs](https://ark-ui.com/svelte/docs/guides/ref)
-- [Refs](https://ark-ui.com/solid/docs/guides/ref)
+- [Quick start](https://base-ui.com/react/overview/quick-start.md): A quick guide to getting started with Base UI.
+- [Accessibility](https://base-ui.com/react/overview/accessibility.md): Learn how to make the most of Base UI's accessibility features and guidelines.
+- [Releases](https://base-ui.com/react/overview/releases.md):
+- [About Base UI](https://base-ui.com/react/overview/about.md): An overview of Base UI, providing information on its history, team, and goals.
+- [Community](https://base-ui.com/react/overview/community.md): Learn how to use Base UI with styles, where to get help, how to stay up to date, and how to contribute.
+- [v1.0.0](https://base-ui.com/react/overview/releases/v1-0-0.md): v1.0.0 release notes. Dec 11, 2025.
+- [v1.0.0-alpha.4](https://base-ui.com/react/overview/releases/v1-0-0-alpha-4.md): v1.0.0-alpha.4 release notes. Dec 17, 2024.
+- [v1.0.0-alpha.5](https://base-ui.com/react/overview/releases/v1-0-0-alpha-5.md): v1.0.0-alpha.5 release notes. Jan 10, 2025.
+- [v1.0.0-alpha.6](https://base-ui.com/react/overview/releases/v1-0-0-alpha-6.md): v1.0.0-alpha.6 release notes. Feb 6, 2025.
+- [v1.0.0-alpha.7](https://base-ui.com/react/overview/releases/v1-0-0-alpha-7.md): v1.0.0-alpha.7 release notes. Mar 20, 2025.
+- [v1.0.0-alpha.8](https://base-ui.com/react/overview/releases/v1-0-0-alpha-8.md): v1.0.0-alpha.8 release notes. Apr 17, 2025.
+- [v1.0.0-beta.0](https://base-ui.com/react/overview/releases/v1-0-0-beta-0.md): v1.0.0-beta.0 release notes. May 29, 2025.
+- [v1.0.0-beta.1](https://base-ui.com/react/overview/releases/v1-0-0-beta-1.md): v1.0.0-beta.1 release notes. Jul 1, 2025.
+- [v1.0.0-beta.2](https://base-ui.com/react/overview/releases/v1-0-0-beta-2.md): v1.0.0-beta.2 release notes. Jul 30, 2025.
+- [v1.0.0-beta.3](https://base-ui.com/react/overview/releases/v1-0-0-beta-3.md): v1.0.0-beta.3 release notes. Sep 3, 2025.
+- [v1.0.0-beta.4](https://base-ui.com/react/overview/releases/v1-0-0-beta-4.md): v1.0.0-beta.4 release notes. Oct 1, 2025.
+- [v1.0.0-beta.5](https://base-ui.com/react/overview/releases/v1-0-0-beta-5.md): v1.0.0-beta.5 release notes. Nov 17, 2025.
+- [v1.0.0-beta.6](https://base-ui.com/react/overview/releases/v1-0-0-beta-6.md): v1.0.0-beta.6 release notes. Nov 17, 2025.
+- [v1.0.0-beta.7](https://base-ui.com/react/overview/releases/v1-0-0-beta-7.md): v1.0.0-beta.7 release notes. Nov 27, 2025.
+- [v1.0.0-rc.0](https://base-ui.com/react/overview/releases/v1-0-0-rc-0.md): v1.0.0-rc.0 release notes. Dec 4, 2025.
+- [v1.0.0-rc.1](https://base-ui.com/react/overview/releases/v1-0-0-rc-1.md): v1.0.0-rc.1 release notes. Dec 11, 2025.
+- [v1.0.0-rc.2](https://base-ui.com/react/overview/releases/v1-0-0-rc-2.md): v1.0.0-rc.2 release notes. Dec 11, 2025.
+- [v1.1.0](https://base-ui.com/react/overview/releases/v1-1-0.md): v1.1.0 release notes. Jan 15, 2026.
+- [v1.2.0](https://base-ui.com/react/overview/releases/v1-2-0.md): v1.2.0 release notes. Feb 12, 2026.
+- [v1.3.0](https://base-ui.com/react/overview/releases/v1-3-0.md): v1.3.0 release notes. Mar 12, 2026.
+- [v1.4.0](https://base-ui.com/react/overview/releases/v1-4-0.md): v1.4.0 release notes. Apr 13, 2026.
+- [v1.4.1](https://base-ui.com/react/overview/releases/v1-4-1.md): v1.4.1 release notes. Apr 20, 2026.
+- [v1.5.0](https://base-ui.com/react/overview/releases/v1-5-0.md): v1.5.0 release notes. May 19, 2026.
+- [v1.6.0](https://base-ui.com/react/overview/releases/v1-6-0.md): v1.6.0 release notes. Jun 18, 2026.
 
-# AI FOR AGENTS
+## Handbook
 
-- [MCP Server](https://ark-ui.com/react/docs/ai/mcp-server)
-- [MCP Server](https://ark-ui.com/vue/docs/ai/mcp-server)
-- [MCP Server](https://ark-ui.com/svelte/docs/ai/mcp-server)
-- [MCP Server](https://ark-ui.com/solid/docs/ai/mcp-server)
-- [LLMs.txt](https://ark-ui.com/react/docs/ai/llms.txt)
-- [LLMs.txt](https://ark-ui.com/vue/docs/ai/llms.txt)
-- [LLMs.txt](https://ark-ui.com/svelte/docs/ai/llms.txt)
-- [LLMs.txt](https://ark-ui.com/solid/docs/ai/llms.txt)
+- [Styling](https://base-ui.com/react/handbook/styling.md): Learn how to style Base UI components with your preferred styling engine.
+- [Animation](https://base-ui.com/react/handbook/animation.md): A guide to animating Base UI components.
+- [Composition](https://base-ui.com/react/handbook/composition.md): A guide to composing Base UI components with your own React components.
+- [Customization](https://base-ui.com/react/handbook/customization.md): A guide to customizing the behavior of Base UI components.
+- [Forms](https://base-ui.com/react/handbook/forms.md): A guide to building forms with Base UI components.
+- [TypeScript](https://base-ui.com/react/handbook/typescript.md): A guide to using TypeScript with Base UI.
 
-# COLLECTIONS
+## Components
 
-- [List Collection](https://ark-ui.com/react/docs/collections/list-collection)
-- [List Collection](https://ark-ui.com/vue/docs/collections/list-collection)
-- [List Collection](https://ark-ui.com/svelte/docs/collections/list-collection)
-- [List Collection](https://ark-ui.com/solid/docs/collections/list-collection)
-- [Tree Collection](https://ark-ui.com/react/docs/collections/tree-collection)
-- [Tree Collection](https://ark-ui.com/vue/docs/collections/tree-collection)
-- [Tree Collection](https://ark-ui.com/svelte/docs/collections/tree-collection)
-- [Tree Collection](https://ark-ui.com/solid/docs/collections/tree-collection)
-- [Async List](https://ark-ui.com/react/docs/collections/async-list)
-- [Async List](https://ark-ui.com/vue/docs/collections/async-list)
-- [Async List](https://ark-ui.com/svelte/docs/collections/async-list)
-- [Async List](https://ark-ui.com/solid/docs/collections/async-list)
-- [List Selection](https://ark-ui.com/react/docs/collections/list-selection)
-- [List Selection](https://ark-ui.com/vue/docs/collections/list-selection)
-- [List Selection](https://ark-ui.com/svelte/docs/collections/list-selection)
-- [List Selection](https://ark-ui.com/solid/docs/collections/list-selection)
+- [Accordion](https://base-ui.com/react/components/accordion.md): A high-quality, unstyled React accordion component that displays a set of collapsible panels with headings.
+- [Alert Dialog](https://base-ui.com/react/components/alert-dialog.md): A high-quality, unstyled React alert dialog component that requires a user response to proceed.
+- [Autocomplete](https://base-ui.com/react/components/autocomplete.md): A high-quality, unstyled React autocomplete component that renders an input with a list of filtered options.
+- [Avatar](https://base-ui.com/react/components/avatar.md): A high-quality, unstyled React avatar component that is easy to customize.
+- [Button](https://base-ui.com/react/components/button.md): A high-quality, unstyled React button component that can be rendered as another tag or focusable when disabled.
+- [Checkbox](https://base-ui.com/react/components/checkbox.md): A high-quality, unstyled React checkbox component that is easy to customize.
+- [Checkbox Group](https://base-ui.com/react/components/checkbox-group.md): A high-quality, unstyled React checkbox group component that provides a shared state for a series of checkboxes.
+- [Collapsible](https://base-ui.com/react/components/collapsible.md): A high-quality, unstyled React collapsible component that displays a panel controlled by a button.
+- [Combobox](https://base-ui.com/react/components/combobox.md): A high-quality, unstyled React combobox component that renders an input combined with a list of predefined items to select.
+- [Context Menu](https://base-ui.com/react/components/context-menu.md): A high-quality, unstyled React context menu component that appears at the pointer on right click or long press.
+- [Dialog](https://base-ui.com/react/components/dialog.md): A high-quality, unstyled React dialog component that opens on top of the entire page.
+- [Drawer](https://base-ui.com/react/components/drawer.md): A high-quality, unstyled React drawer component with swipe-to-dismiss gestures.
+- [Field](https://base-ui.com/react/components/field.md): A high-quality, unstyled React field component that provides labeling and validation for form controls.
+- [Fieldset](https://base-ui.com/react/components/fieldset.md): A high-quality, unstyled React fieldset component with an easily stylable legend.
+- [Form](https://base-ui.com/react/components/form.md): A high-quality, unstyled React form component with consolidated error handling.
+- [Input](https://base-ui.com/react/components/input.md): A high-quality, unstyled React input component.
+- [Menu](https://base-ui.com/react/components/menu.md): A high-quality, unstyled React menu component that displays list of actions in a dropdown, enhanced with keyboard navigation.
+- [Menubar](https://base-ui.com/react/components/menubar.md): A menu bar providing commands and options for your application.
+- [Meter](https://base-ui.com/react/components/meter.md): A high-quality, unstyled React meter component that provides a graphical display of a numeric value.
+- [Navigation Menu](https://base-ui.com/react/components/navigation-menu.md): A high-quality, unstyled React navigation menu component that displays a collection of links and menus for website navigation.
+- [Number Field](https://base-ui.com/react/components/number-field.md): A high-quality, unstyled React number field component with increment and decrement buttons, and a scrub area.
+- [OTP Field](https://base-ui.com/react/components/otp-field.md): A high-quality, unstyled React OTP field component for one-time password and verification code entry.
+- [Popover](https://base-ui.com/react/components/popover.md): A high-quality, unstyled React popover component that displays an accessible popup anchored to a button.
+- [Preview Card](https://base-ui.com/react/components/preview-card.md): A high-quality, unstyled React preview card component that appears when a link is hovered, showing a preview for sighted users.
+- [Progress](https://base-ui.com/react/components/progress.md): A high-quality, unstyled React progress bar component that displays the status of a task that takes a long time.
+- [Radio](https://base-ui.com/react/components/radio.md): A high-quality, unstyled React radio button component that is easy to style.
+- [Scroll Area](https://base-ui.com/react/components/scroll-area.md): A high-quality, unstyled React scroll area that provides a native scroll container with custom scrollbars.
+- [Select](https://base-ui.com/react/components/select.md): A high-quality, unstyled React select component for choosing a predefined value in a dropdown menu.
+- [Separator](https://base-ui.com/react/components/separator.md): A high-quality, unstyled React separator component that is accessible to screen readers.
+- [Slider](https://base-ui.com/react/components/slider.md): A high-quality, unstyled React slider component that works like a range input and is easy to style.
+- [Switch](https://base-ui.com/react/components/switch.md): A high-quality, unstyled React switch component that indicates whether a setting is on or off.
+- [Tabs](https://base-ui.com/react/components/tabs.md): A high-quality, unstyled React tabs component for toggling between related panels on the same page.
+- [Toast](https://base-ui.com/react/components/toast.md): A high-quality, unstyled React toast component to generate notifications.
+- [Toggle](https://base-ui.com/react/components/toggle.md): A high-quality, unstyled React toggle component that displays a two-state button that can be on or off.
+- [Toggle Group](https://base-ui.com/react/components/toggle-group.md): A high-quality, unstyled React toggle group component that provides shared state to a series of toggle buttons.
+- [Toolbar](https://base-ui.com/react/components/toolbar.md): A high-quality, unstyled React toolbar component that groups a set of buttons and controls.
+- [Tooltip](https://base-ui.com/react/components/tooltip.md): A high-quality, unstyled React tooltip component that appears when an element is hovered or focused, showing a hint for sighted users.
 
-# COMPONENTS
+## Utilities
 
-- [Accordion](https://ark-ui.com/react/docs/components/accordion)
-- [Accordion](https://ark-ui.com/vue/docs/components/accordion)
-- [Accordion](https://ark-ui.com/svelte/docs/components/accordion)
-- [Accordion](https://ark-ui.com/solid/docs/components/accordion)
-- [Angle Slider](https://ark-ui.com/react/docs/components/angle-slider)
-- [Angle Slider](https://ark-ui.com/vue/docs/components/angle-slider)
-- [Angle Slider](https://ark-ui.com/svelte/docs/components/angle-slider)
-- [Angle Slider](https://ark-ui.com/solid/docs/components/angle-slider)
-- [Avatar](https://ark-ui.com/react/docs/components/avatar)
-- [Avatar](https://ark-ui.com/vue/docs/components/avatar)
-- [Avatar](https://ark-ui.com/svelte/docs/components/avatar)
-- [Avatar](https://ark-ui.com/solid/docs/components/avatar)
-- [Carousel](https://ark-ui.com/react/docs/components/carousel)
-- [Carousel](https://ark-ui.com/vue/docs/components/carousel)
-- [Carousel](https://ark-ui.com/svelte/docs/components/carousel)
-- [Carousel](https://ark-ui.com/solid/docs/components/carousel)
-- [Checkbox](https://ark-ui.com/react/docs/components/checkbox)
-- [Checkbox](https://ark-ui.com/vue/docs/components/checkbox)
-- [Checkbox](https://ark-ui.com/svelte/docs/components/checkbox)
-- [Checkbox](https://ark-ui.com/solid/docs/components/checkbox)
-- [Clipboard](https://ark-ui.com/react/docs/components/clipboard)
-- [Clipboard](https://ark-ui.com/vue/docs/components/clipboard)
-- [Clipboard](https://ark-ui.com/svelte/docs/components/clipboard)
-- [Clipboard](https://ark-ui.com/solid/docs/components/clipboard)
-- [Collapsible](https://ark-ui.com/react/docs/components/collapsible)
-- [Collapsible](https://ark-ui.com/vue/docs/components/collapsible)
-- [Collapsible](https://ark-ui.com/svelte/docs/components/collapsible)
-- [Collapsible](https://ark-ui.com/solid/docs/components/collapsible)
-- [Color Picker](https://ark-ui.com/react/docs/components/color-picker)
-- [Color Picker](https://ark-ui.com/vue/docs/components/color-picker)
-- [Color Picker](https://ark-ui.com/svelte/docs/components/color-picker)
-- [Color Picker](https://ark-ui.com/solid/docs/components/color-picker)
-- [Combobox](https://ark-ui.com/react/docs/components/combobox)
-- [Combobox](https://ark-ui.com/vue/docs/components/combobox)
-- [Combobox](https://ark-ui.com/svelte/docs/components/combobox)
-- [Combobox](https://ark-ui.com/solid/docs/components/combobox)
-- [Date Picker](https://ark-ui.com/react/docs/components/date-picker)
-- [Date Picker](https://ark-ui.com/vue/docs/components/date-picker)
-- [Date Picker](https://ark-ui.com/svelte/docs/components/date-picker)
-- [Date Picker](https://ark-ui.com/solid/docs/components/date-picker)
-- [Dialog](https://ark-ui.com/react/docs/components/dialog)
-- [Dialog](https://ark-ui.com/vue/docs/components/dialog)
-- [Dialog](https://ark-ui.com/svelte/docs/components/dialog)
-- [Dialog](https://ark-ui.com/solid/docs/components/dialog)
-- [Editable](https://ark-ui.com/react/docs/components/editable)
-- [Editable](https://ark-ui.com/vue/docs/components/editable)
-- [Editable](https://ark-ui.com/svelte/docs/components/editable)
-- [Editable](https://ark-ui.com/solid/docs/components/editable)
-- [Field](https://ark-ui.com/react/docs/components/field)
-- [Field](https://ark-ui.com/vue/docs/components/field)
-- [Field](https://ark-ui.com/svelte/docs/components/field)
-- [Field](https://ark-ui.com/solid/docs/components/field)
-- [Fieldset](https://ark-ui.com/react/docs/components/fieldset)
-- [Fieldset](https://ark-ui.com/vue/docs/components/fieldset)
-- [Fieldset](https://ark-ui.com/svelte/docs/components/fieldset)
-- [Fieldset](https://ark-ui.com/solid/docs/components/fieldset)
-- [File Upload](https://ark-ui.com/react/docs/components/file-upload)
-- [File Upload](https://ark-ui.com/vue/docs/components/file-upload)
-- [File Upload](https://ark-ui.com/svelte/docs/components/file-upload)
-- [File Upload](https://ark-ui.com/solid/docs/components/file-upload)
-- [Floating Panel](https://ark-ui.com/react/docs/components/floating-panel)
-- [Floating Panel](https://ark-ui.com/vue/docs/components/floating-panel)
-- [Floating Panel](https://ark-ui.com/svelte/docs/components/floating-panel)
-- [Floating Panel](https://ark-ui.com/solid/docs/components/floating-panel)
-- [Image Cropper](https://ark-ui.com/react/docs/components/image-cropper)
-- [Image Cropper](https://ark-ui.com/vue/docs/components/image-cropper)
-- [Image Cropper](https://ark-ui.com/svelte/docs/components/image-cropper)
-- [Image Cropper](https://ark-ui.com/solid/docs/components/image-cropper)
-- [Hover Card](https://ark-ui.com/react/docs/components/hover-card)
-- [Hover Card](https://ark-ui.com/vue/docs/components/hover-card)
-- [Hover Card](https://ark-ui.com/svelte/docs/components/hover-card)
-- [Hover Card](https://ark-ui.com/solid/docs/components/hover-card)
-- [Listbox](https://ark-ui.com/react/docs/components/listbox)
-- [Listbox](https://ark-ui.com/vue/docs/components/listbox)
-- [Listbox](https://ark-ui.com/svelte/docs/components/listbox)
-- [Listbox](https://ark-ui.com/solid/docs/components/listbox)
-- [Marquee](https://ark-ui.com/react/docs/components/marquee)
-- [Marquee](https://ark-ui.com/vue/docs/components/marquee)
-- [Marquee](https://ark-ui.com/svelte/docs/components/marquee)
-- [Marquee](https://ark-ui.com/solid/docs/components/marquee)
-- [Menu](https://ark-ui.com/react/docs/components/menu)
-- [Menu](https://ark-ui.com/vue/docs/components/menu)
-- [Menu](https://ark-ui.com/svelte/docs/components/menu)
-- [Menu](https://ark-ui.com/solid/docs/components/menu)
-- [Number Input](https://ark-ui.com/react/docs/components/number-input)
-- [Number Input](https://ark-ui.com/vue/docs/components/number-input)
-- [Number Input](https://ark-ui.com/svelte/docs/components/number-input)
-- [Number Input](https://ark-ui.com/solid/docs/components/number-input)
-- [Pagination](https://ark-ui.com/react/docs/components/pagination)
-- [Pagination](https://ark-ui.com/vue/docs/components/pagination)
-- [Pagination](https://ark-ui.com/svelte/docs/components/pagination)
-- [Pagination](https://ark-ui.com/solid/docs/components/pagination)
-- [Password Input](https://ark-ui.com/react/docs/components/password-input)
-- [Password Input](https://ark-ui.com/vue/docs/components/password-input)
-- [Password Input](https://ark-ui.com/svelte/docs/components/password-input)
-- [Password Input](https://ark-ui.com/solid/docs/components/password-input)
-- [Pin Input](https://ark-ui.com/react/docs/components/pin-input)
-- [Pin Input](https://ark-ui.com/vue/docs/components/pin-input)
-- [Pin Input](https://ark-ui.com/svelte/docs/components/pin-input)
-- [Pin Input](https://ark-ui.com/solid/docs/components/pin-input)
-- [Popover](https://ark-ui.com/react/docs/components/popover)
-- [Popover](https://ark-ui.com/vue/docs/components/popover)
-- [Popover](https://ark-ui.com/svelte/docs/components/popover)
-- [Popover](https://ark-ui.com/solid/docs/components/popover)
-- [Progress - Circular](https://ark-ui.com/react/docs/components/progress-circular)
-- [Progress - Circular](https://ark-ui.com/vue/docs/components/progress-circular)
-- [Progress - Circular](https://ark-ui.com/svelte/docs/components/progress-circular)
-- [Progress - Circular](https://ark-ui.com/solid/docs/components/progress-circular)
-- [Progress - Linear](https://ark-ui.com/react/docs/components/progress-linear)
-- [Progress - Linear](https://ark-ui.com/vue/docs/components/progress-linear)
-- [Progress - Linear](https://ark-ui.com/svelte/docs/components/progress-linear)
-- [Progress - Linear](https://ark-ui.com/solid/docs/components/progress-linear)
-- [QR Code](https://ark-ui.com/react/docs/components/qr-code)
-- [QR Code](https://ark-ui.com/vue/docs/components/qr-code)
-- [QR Code](https://ark-ui.com/svelte/docs/components/qr-code)
-- [QR Code](https://ark-ui.com/solid/docs/components/qr-code)
-- [Radio Group](https://ark-ui.com/react/docs/components/radio-group)
-- [Radio Group](https://ark-ui.com/vue/docs/components/radio-group)
-- [Radio Group](https://ark-ui.com/svelte/docs/components/radio-group)
-- [Radio Group](https://ark-ui.com/solid/docs/components/radio-group)
-- [Rating Group](https://ark-ui.com/react/docs/components/rating-group)
-- [Rating Group](https://ark-ui.com/vue/docs/components/rating-group)
-- [Rating Group](https://ark-ui.com/svelte/docs/components/rating-group)
-- [Rating Group](https://ark-ui.com/solid/docs/components/rating-group)
-- [Scroll Area](https://ark-ui.com/react/docs/components/scroll-area)
-- [Scroll Area](https://ark-ui.com/vue/docs/components/scroll-area)
-- [Scroll Area](https://ark-ui.com/svelte/docs/components/scroll-area)
-- [Scroll Area](https://ark-ui.com/solid/docs/components/scroll-area)
-- [Segment Group](https://ark-ui.com/react/docs/components/segment-group)
-- [Segment Group](https://ark-ui.com/vue/docs/components/segment-group)
-- [Segment Group](https://ark-ui.com/svelte/docs/components/segment-group)
-- [Segment Group](https://ark-ui.com/solid/docs/components/segment-group)
-- [Select](https://ark-ui.com/react/docs/components/select)
-- [Select](https://ark-ui.com/vue/docs/components/select)
-- [Select](https://ark-ui.com/svelte/docs/components/select)
-- [Select](https://ark-ui.com/solid/docs/components/select)
-- [Signature Pad](https://ark-ui.com/react/docs/components/signature-pad)
-- [Signature Pad](https://ark-ui.com/vue/docs/components/signature-pad)
-- [Signature Pad](https://ark-ui.com/svelte/docs/components/signature-pad)
-- [Signature Pad](https://ark-ui.com/solid/docs/components/signature-pad)
-- [Slider](https://ark-ui.com/react/docs/components/slider)
-- [Slider](https://ark-ui.com/vue/docs/components/slider)
-- [Slider](https://ark-ui.com/svelte/docs/components/slider)
-- [Slider](https://ark-ui.com/solid/docs/components/slider)
-- [Splitter](https://ark-ui.com/react/docs/components/splitter)
-- [Splitter](https://ark-ui.com/vue/docs/components/splitter)
-- [Splitter](https://ark-ui.com/svelte/docs/components/splitter)
-- [Splitter](https://ark-ui.com/solid/docs/components/splitter)
-- [Steps](https://ark-ui.com/react/docs/components/steps)
-- [Steps](https://ark-ui.com/vue/docs/components/steps)
-- [Steps](https://ark-ui.com/svelte/docs/components/steps)
-- [Steps](https://ark-ui.com/solid/docs/components/steps)
-- [Switch](https://ark-ui.com/react/docs/components/switch)
-- [Switch](https://ark-ui.com/vue/docs/components/switch)
-- [Switch](https://ark-ui.com/svelte/docs/components/switch)
-- [Switch](https://ark-ui.com/solid/docs/components/switch)
-- [Tabs](https://ark-ui.com/react/docs/components/tabs)
-- [Tabs](https://ark-ui.com/vue/docs/components/tabs)
-- [Tabs](https://ark-ui.com/svelte/docs/components/tabs)
-- [Tabs](https://ark-ui.com/solid/docs/components/tabs)
-- [Tags Input](https://ark-ui.com/react/docs/components/tags-input)
-- [Tags Input](https://ark-ui.com/vue/docs/components/tags-input)
-- [Tags Input](https://ark-ui.com/svelte/docs/components/tags-input)
-- [Tags Input](https://ark-ui.com/solid/docs/components/tags-input)
-- [Timer](https://ark-ui.com/react/docs/components/timer)
-- [Timer](https://ark-ui.com/vue/docs/components/timer)
-- [Timer](https://ark-ui.com/svelte/docs/components/timer)
-- [Timer](https://ark-ui.com/solid/docs/components/timer)
-- [Toast](https://ark-ui.com/react/docs/components/toast)
-- [Toast](https://ark-ui.com/vue/docs/components/toast)
-- [Toast](https://ark-ui.com/svelte/docs/components/toast)
-- [Toast](https://ark-ui.com/solid/docs/components/toast)
-- [Toggle](https://ark-ui.com/react/docs/components/toggle)
-- [Toggle](https://ark-ui.com/vue/docs/components/toggle)
-- [Toggle](https://ark-ui.com/svelte/docs/components/toggle)
-- [Toggle](https://ark-ui.com/solid/docs/components/toggle)
-- [Toggle Group](https://ark-ui.com/react/docs/components/toggle-group)
-- [Toggle Group](https://ark-ui.com/vue/docs/components/toggle-group)
-- [Toggle Group](https://ark-ui.com/svelte/docs/components/toggle-group)
-- [Toggle Group](https://ark-ui.com/solid/docs/components/toggle-group)
-- [Tooltip](https://ark-ui.com/react/docs/components/tooltip)
-- [Tooltip](https://ark-ui.com/vue/docs/components/tooltip)
-- [Tooltip](https://ark-ui.com/svelte/docs/components/tooltip)
-- [Tooltip](https://ark-ui.com/solid/docs/components/tooltip)
-- [Tour](https://ark-ui.com/react/docs/components/tour)
-- [Tour](https://ark-ui.com/vue/docs/components/tour)
-- [Tour](https://ark-ui.com/svelte/docs/components/tour)
-- [Tour](https://ark-ui.com/solid/docs/components/tour)
-- [Tree View](https://ark-ui.com/react/docs/components/tree-view)
-- [Tree View](https://ark-ui.com/vue/docs/components/tree-view)
-- [Tree View](https://ark-ui.com/svelte/docs/components/tree-view)
-- [Tree View](https://ark-ui.com/solid/docs/components/tree-view)
-
-# UTILITIES
-
-- [Client Only](https://ark-ui.com/react/docs/utilities/client-only)
-- [Client Only](https://ark-ui.com/vue/docs/utilities/client-only)
-- [Client Only](https://ark-ui.com/svelte/docs/utilities/client-only)
-- [Client Only](https://ark-ui.com/solid/docs/utilities/client-only)
-- [Download Trigger](https://ark-ui.com/react/docs/utilities/download-trigger)
-- [Download Trigger](https://ark-ui.com/vue/docs/utilities/download-trigger)
-- [Download Trigger](https://ark-ui.com/svelte/docs/utilities/download-trigger)
-- [Download Trigger](https://ark-ui.com/solid/docs/utilities/download-trigger)
-- [Environment](https://ark-ui.com/react/docs/utilities/environment)
-- [Environment](https://ark-ui.com/vue/docs/utilities/environment)
-- [Environment](https://ark-ui.com/svelte/docs/utilities/environment)
-- [Environment](https://ark-ui.com/solid/docs/utilities/environment)
-- [Focus Trap](https://ark-ui.com/react/docs/utilities/focus-trap)
-- [Focus Trap](https://ark-ui.com/vue/docs/utilities/focus-trap)
-- [Focus Trap](https://ark-ui.com/svelte/docs/utilities/focus-trap)
-- [Focus Trap](https://ark-ui.com/solid/docs/utilities/focus-trap)
-- [Format Byte](https://ark-ui.com/react/docs/utilities/format-byte)
-- [Format Byte](https://ark-ui.com/vue/docs/utilities/format-byte)
-- [Format Byte](https://ark-ui.com/svelte/docs/utilities/format-byte)
-- [Format Byte](https://ark-ui.com/solid/docs/utilities/format-byte)
-- [Format Time](https://ark-ui.com/react/docs/utilities/format-time)
-- [Format Time](https://ark-ui.com/vue/docs/utilities/format-time)
-- [Format Time](https://ark-ui.com/svelte/docs/utilities/format-time)
-- [Format Time](https://ark-ui.com/solid/docs/utilities/format-time)
-- [Format Relative Time](https://ark-ui.com/react/docs/utilities/format-relative-time)
-- [Format Relative Time](https://ark-ui.com/vue/docs/utilities/format-relative-time)
-- [Format Relative Time](https://ark-ui.com/svelte/docs/utilities/format-relative-time)
-- [Format Relative Time](https://ark-ui.com/solid/docs/utilities/format-relative-time)
-- [Frame](https://ark-ui.com/react/docs/utilities/frame)
-- [Frame](https://ark-ui.com/vue/docs/utilities/frame)
-- [Frame](https://ark-ui.com/svelte/docs/utilities/frame)
-- [Frame](https://ark-ui.com/solid/docs/utilities/frame)
-- [Highlight](https://ark-ui.com/react/docs/utilities/highlight)
-- [Highlight](https://ark-ui.com/vue/docs/utilities/highlight)
-- [Highlight](https://ark-ui.com/svelte/docs/utilities/highlight)
-- [Highlight](https://ark-ui.com/solid/docs/utilities/highlight)
-- [JSON Tree View](https://ark-ui.com/react/docs/utilities/json-tree-view)
-- [JSON Tree View](https://ark-ui.com/vue/docs/utilities/json-tree-view)
-- [JSON Tree View](https://ark-ui.com/svelte/docs/utilities/json-tree-view)
-- [JSON Tree View](https://ark-ui.com/solid/docs/utilities/json-tree-view)
-- [Locale](https://ark-ui.com/react/docs/utilities/locale)
-- [Locale](https://ark-ui.com/vue/docs/utilities/locale)
-- [Locale](https://ark-ui.com/svelte/docs/utilities/locale)
-- [Locale](https://ark-ui.com/solid/docs/utilities/locale)
-- [Presence](https://ark-ui.com/react/docs/utilities/presence)
-- [Presence](https://ark-ui.com/vue/docs/utilities/presence)
-- [Presence](https://ark-ui.com/svelte/docs/utilities/presence)
-- [Presence](https://ark-ui.com/solid/docs/utilities/presence)
-- [Swap](https://ark-ui.com/react/docs/utilities/swap)
-- [Swap](https://ark-ui.com/vue/docs/utilities/swap)
-- [Swap](https://ark-ui.com/svelte/docs/utilities/swap)
-- [Swap](https://ark-ui.com/solid/docs/utilities/swap)
+- [CSP Provider](https://base-ui.com/react/utils/csp-provider.md): A CSP provider component that applies a nonce to inline `<style>` and `<script>` tags rendered by Base UI components, and can disable inline `<style>` elements.
+- [Direction Provider](https://base-ui.com/react/utils/direction-provider.md): A direction provider component that enables RTL behavior for Base UI components.
+- [mergeProps](https://base-ui.com/react/utils/merge-props.md): A utility to merge multiple sets of React props, handling event handlers, className, and style props intelligently.
+- [useRender](https://base-ui.com/react/utils/use-render.md): Hook for enabling a render prop in custom components.
