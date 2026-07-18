@@ -34,6 +34,8 @@ The Tailwind CSS examples are written for Tailwind CSS v4. If `package.json` use
 - [v1.3.0](https://base-ui.com/react/overview/releases/v1-3-0.md): v1.3.0 release notes. Mar 12, 2026.
 - [v1.4.0](https://base-ui.com/react/overview/releases/v1-4-0.md): v1.4.0 release notes. Apr 13, 2026.
 - [v1.4.1](https://base-ui.com/react/overview/releases/v1-4-1.md): v1.4.1 release notes. Apr 20, 2026.
+- [v1.5.0](https://base-ui.com/react/overview/releases/v1-5-0.md): v1.5.0 release notes. May 19, 2026.
+- [v1.6.0](https://base-ui.com/react/overview/releases/v1-6-0.md): v1.6.0 release notes. Jun 18, 2026.
 
 ## Handbook
 
@@ -86,7 +88,7 @@ The Tailwind CSS examples are written for Tailwind CSS v4. If `package.json` use
 
 ## Utilities
 
-- [CSP Provider](https://base-ui.com/react/utils/csp-provider.md): A CSP provider component that applies a nonce to inline <style> and <script> tags rendered by Base UI components, and can disable inline <style> elements.
+- [CSP Provider](https://base-ui.com/react/utils/csp-provider.md): A CSP provider component that applies a nonce to inline `<style>` and `<script>` tags rendered by Base UI components, and can disable inline `<style>` elements.
 - [Direction Provider](https://base-ui.com/react/utils/direction-provider.md): A direction provider component that enables RTL behavior for Base UI components.
 - [mergeProps](https://base-ui.com/react/utils/merge-props.md): A utility to merge multiple sets of React props, handling event handlers, className, and style props intelligently.
 - [useRender](https://base-ui.com/react/utils/use-render.md): Hook for enabling a render prop in custom components.
