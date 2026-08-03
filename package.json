@@ -65,6 +65,7 @@
     "jest": "^30.4.2",
     "lefthook": "^2.1.10",
     "msw": "^2.15.0",
+    "msw-storybook-addon": "^3.0.0",
     "playwright": "^1.62.1",
     "postcss": "^8.5.25",
     "postcss-load-config": "^6.0.1",

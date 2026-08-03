@@ -1,10 +1,12 @@
 import { withThemeByClassName } from '@storybook/addon-themes'
 import { type Preview } from '@storybook/nextjs-vite'
+import { mswLoader } from 'msw-storybook-addon/csf3'
 
 // @ts-expect-error: Loading global.css in Storybook for tailwind styles
 import '../src/styles/global.css'
 
 const preview: Preview = {
+  loaders: [mswLoader()],
   parameters: {
     controls: {
       matchers: {
@@ -12,16 +14,7 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    decorators: [
-      withThemeByClassName({
-        themes: {
-          light: '',
-          dark: 'dark',
-        },
-        defaultTheme: 'light',
-      }),
-    ],
-
+    msw: [],
     a11y: {
       // 'todo' - show a11y violations in the test UI only
       // 'error' - fail CI on a11y violations
@@ -29,6 +22,15 @@ const preview: Preview = {
       test: 'todo',
     },
   },
+  decorators: [
+    withThemeByClassName({
+      themes: {
+        light: '',
+        dark: 'dark',
+      },
+      defaultTheme: 'light',
+    }),
+  ],
 }
 
 export default preview
