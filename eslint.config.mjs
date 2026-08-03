@@ -1,5 +1,4 @@
 import eslint from '@eslint/js'
-import nextVitals from 'eslint-config-next/core-web-vitals'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
@@ -16,7 +15,6 @@ export default defineConfig(
   react.configs.flat.recommended,
   react.configs.flat['jsx-runtime'],
   reactHooks.configs.flat.recommended,
-  ...nextVitals,
   {
     languageOptions: {
       globals: { ...globals.browser, ...globals.node, ...globals.jest },
@@ -25,6 +23,9 @@ export default defineConfig(
         sourceType: 'module',
         ecmaVersion: 'latest',
       },
+    },
+    settings: {
+      react: { version: 'detect' },
     },
     rules: {
       '@typescript-eslint/no-unused-vars': [
