@@ -1,12 +1,26 @@
 import { render } from '@testing-library/react'
-import { describe, expect, it } from 'vitest'
+import userEvent from '@testing-library/user-event'
 
 import { Button } from '~/components/ui/button'
 
 describe('<Button />', () => {
   it('should display the correct text', () => {
-    const page = render(<Button>Click me</Button>)
-    const button = page.getByRole('button')
-    expect(button).toBeDefined()
+    const screen = render(<Button>Click me</Button>)
+
+    const button = screen.getByRole('button')
+
+    expect(button).toBeInTheDocument()
+  })
+
+  it('should be clickable', async () => {
+    const fnMock = vi.fn()
+    const user = userEvent.setup()
+
+    const screen = render(<Button onClick={fnMock}>Click me</Button>)
+    const button = screen.getByRole('button')
+
+    await user.click(button)
+
+    expect(fnMock).toHaveBeenCalled()
   })
 })
