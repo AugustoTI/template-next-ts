@@ -17,7 +17,7 @@ export default defineConfig(
   reactHooks.configs.flat.recommended,
   {
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node, ...globals.jest },
+      globals: { ...globals.browser, ...globals.node, ...globals.vitest },
       parserOptions: {
         ecmaFeatures: { jsx: true },
         sourceType: 'module',

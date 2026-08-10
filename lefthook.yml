@@ -15,7 +15,7 @@ pre-commit:
 
     - name: running-tests
       glob: '*.{tsx,ts}'
-      run: pnpm test -- --findRelatedTests {staged_files}
+      run: pnpm test -- related {staged_files}
 
 commit-msg:
   jobs:

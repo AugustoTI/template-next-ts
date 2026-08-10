@@ -36,6 +36,7 @@ The Tailwind CSS examples are written for Tailwind CSS v4. If `package.json` use
 - [v1.4.1](https://base-ui.com/react/overview/releases/v1-4-1.md): v1.4.1 release notes. Apr 20, 2026.
 - [v1.5.0](https://base-ui.com/react/overview/releases/v1-5-0.md): v1.5.0 release notes. May 19, 2026.
 - [v1.6.0](https://base-ui.com/react/overview/releases/v1-6-0.md): v1.6.0 release notes. Jun 18, 2026.
+- [v1.7.0](https://base-ui.com/react/overview/releases/v1-7-0.md): v1.7.0 release notes. Aug 4, 2026.
 
 ## Handbook
 
