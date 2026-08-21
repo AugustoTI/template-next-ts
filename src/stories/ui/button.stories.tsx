@@ -5,6 +5,9 @@ import { Button } from '~/components/ui/button'
 export default {
   title: 'UI/Button',
   component: Button,
+  args: {
+    children: 'Click me',
+  },
 } satisfies Meta<typeof Button>
 
 type Story = StoryObj<typeof Button>

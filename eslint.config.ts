@@ -1,8 +1,8 @@
+import eslintReact from '@eslint-react/eslint-plugin'
 import eslint from '@eslint/js'
 import eslintConfigPrettier from 'eslint-config-prettier'
-import eslintReact from "@eslint-react/eslint-plugin";
 import reactHooks from 'eslint-plugin-react-hooks'
-import { defineConfig } from 'eslint/config'
+import { defineConfig, globalIgnores } from 'eslint/config'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
@@ -12,6 +12,7 @@ export default defineConfig(
   eslintConfigPrettier,
   eslintReact.configs['recommended-typescript'],
   reactHooks.configs.flat.recommended,
+  globalIgnores(['.next', 'coverage', 'storybook-static', '.temp'], 'Build artifacts'),
   {
     languageOptions: {
       globals: { ...globals.browser, ...globals.node, ...globals.vitest },

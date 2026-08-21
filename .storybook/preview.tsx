@@ -2,7 +2,6 @@ import { withThemeByClassName } from '@storybook/addon-themes'
 import { type Preview } from '@storybook/nextjs-vite'
 import { mswLoader } from 'msw-storybook-addon/csf3'
 
-// @ts-expect-error: Loading global.css in Storybook for tailwind styles
 import '../src/styles/global.css'
 
 const preview: Preview = {
