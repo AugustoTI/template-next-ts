@@ -1,0 +1,28 @@
+name: Pull Request Workflow
+
+on: pull_request
+
+permissions:
+  id-token: write
+  contents: write
+  issues: write
+  pull-requests: write
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/setup@v2
+        with:
+          version: 11
+          runtime: node@24.14.0
+          cache: true
+
+      - name: Run tests
+        run: pnpm test --coverage
+
+      - name: Report Coverage
+        uses:  davelosert/vitest-coverage-report-action@v2

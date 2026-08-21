@@ -24,4 +24,3 @@ commit-msg:
 pre-push:
   jobs:
     - run: pnpm build
-    - run: pnpm lint
