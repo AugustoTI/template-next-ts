@@ -8,7 +8,6 @@ permissions:
   issues: write
   pull-requests: write
 
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -18,11 +17,11 @@ jobs:
       - uses: pnpm/setup@v2
         with:
           version: 11
-          runtime: node@24.14.0
+          runtime: node@24.20.0
           cache: true
 
       - name: Run tests
         run: pnpm test --coverage
 
       - name: Report Coverage
-        uses:  davelosert/vitest-coverage-report-action@v2
+        uses: davelosert/vitest-coverage-report-action@v2

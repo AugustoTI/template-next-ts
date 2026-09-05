@@ -2,12 +2,13 @@ pre-commit:
   parallel: true
   jobs:
     - name: running-eslint
-      run: pnpm lint --cache --cache-location .temp/.eslintcache
+      glob: '*.{ts,tsx,mts,cts}'
+      run: pnpm lint:base
       stage_fixed: true
 
     - name: running-prettier
-      glob: '*.{css,json,md,mdx,mjs}'
-      run: pnpm format {staged_files}
+      glob: '*.{css,json,md,mdx}'
+      run: pnpm format:base {staged_files}
       stage_fixed: true
 
     - name: running-type-check

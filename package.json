@@ -11,9 +11,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "lint": "eslint src --max-warnings=0 --fix",
+    "lint:base": "eslint src --max-warnings=0 --fix",
+    "lint": "pnpm lint:base --cache --cache-location .temp/.eslintcache",
     "start": "next start",
-    "format": "prettier -wc",
+    "format:base": "prettier --check --write --cache-location=.temp/.prettiercache",
+    "format": "pnpm format:base --cache",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
