@@ -37,6 +37,7 @@ The Tailwind CSS examples are written for Tailwind CSS v4. If `package.json` use
 - [v1.5.0](https://base-ui.com/react/overview/releases/v1-5-0.md): v1.5.0 release notes. May 19, 2026.
 - [v1.6.0](https://base-ui.com/react/overview/releases/v1-6-0.md): v1.6.0 release notes. Jun 18, 2026.
 - [v1.7.0](https://base-ui.com/react/overview/releases/v1-7-0.md): v1.7.0 release notes. Aug 4, 2026.
+- [v1.8.0](https://base-ui.com/react/overview/releases/v1-8-0.md): v1.8.0 release notes. Sep 4, 2026.
 
 ## Handbook
 
@@ -72,7 +73,7 @@ The Tailwind CSS examples are written for Tailwind CSS v4. If `package.json` use
 - [Number Field](https://base-ui.com/react/components/number-field.md): A high-quality, unstyled React number field component with increment and decrement buttons, and a scrub area.
 - [OTP Field](https://base-ui.com/react/components/otp-field.md): A high-quality, unstyled React OTP field component for one-time password and verification code entry.
 - [Popover](https://base-ui.com/react/components/popover.md): A high-quality, unstyled React popover component that displays an accessible popup anchored to a button.
-- [Preview Card](https://base-ui.com/react/components/preview-card.md): A high-quality, unstyled React preview card component that appears when a link is hovered, showing a preview for sighted users.
+- [Preview Card](https://base-ui.com/react/components/preview-card.md): A high-quality, unstyled React preview card component for a link that shows a destination preview without interrupting keyboard or screen reader navigation.
 - [Progress](https://base-ui.com/react/components/progress.md): A high-quality, unstyled React progress bar component that displays the status of a task that takes a long time.
 - [Radio](https://base-ui.com/react/components/radio.md): A high-quality, unstyled React radio button component that is easy to style.
 - [Scroll Area](https://base-ui.com/react/components/scroll-area.md): A high-quality, unstyled React scroll area that provides a native scroll container with custom scrollbars.
