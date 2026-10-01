@@ -11,10 +11,24 @@ minimumReleaseAgeExclude:
   - eslint@10.10.0
   - playwright-core@1.63.0
   - playwright@1.63.0
-  - shadcn@4.21.0
+  - shadcn@4.21.0 || 4.21.1
   - '@types/node@22.20.2'
   - '@types/react-dom@19.3.0'
   - '@types/react@19.3.0'
   - react-dom@19.3.0
   - react@19.3.0
   - scheduler@0.28.0
+  - '@shadcn/registry@0.1.0'
+  - globals@17.13.0
+  - lefthook-darwin-arm64@2.1.16
+  - lefthook-darwin-x64@2.1.16
+  - lefthook-freebsd-arm64@2.1.16
+  - lefthook-freebsd-x64@2.1.16
+  - lefthook-linux-arm64@2.1.16
+  - lefthook-linux-x64@2.1.16
+  - lefthook-openbsd-arm64@2.1.16
+  - lefthook-openbsd-x64@2.1.16
+  - lefthook-windows-arm64@2.1.16
+  - lefthook-windows-x64@2.1.16
+  - lefthook@2.1.16
+  - vite@8.3.2

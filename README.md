@@ -12,7 +12,7 @@ format, testes, commits e hooks de git).
 | UI              | [React 19](https://react.dev)                                                                                     |
 | Estilização     | [Tailwind CSS v4](https://tailwindcss.com)                                                                        |
 | Componentes     | [shadcn/ui](https://ui.shadcn.com) sobre [`@base-ui/react`](https://base-ui.com) (headless, não Radix)            |
-| Variantes       | `class-variance-authority` (CVA)                                                                                  |
+| Variantes       | `tailwind-variants`                                                                                               |
 | Temas           | [`@wrksz/themes`](https://www.npmjs.com/package/@wrksz/themes)                                                    |
 | Validação/Env   | [Zod](https://zod.dev) + [`@t3-oss/env-nextjs`](https://env.t3.gg)                                                |
 | Datas           | [`dayjs`](https://day.js.org)                                                                                     |
@@ -95,8 +95,8 @@ Principais pontos de extensão:
   `src/styles/global.css` e `components.json`.
 - O tema é fornecido pelo `@wrksz/themes` (`ThemeProvider` configurado em
   `src/app/layout.tsx`, com suporte a modo claro/escuro/sistema).
-- Componentes seguem o padrão `data-slot` + variantes CVA (veja
-  `src/components/ui/button.tsx` como referência de variantes/tamanhos).
+- Componentes seguem o padrão `data-slot` + variantes (veja `src/components/ui/button.tsx`
+  como referência de variantes/tamanhos).
 
 ## Qualidade e Git hooks
 

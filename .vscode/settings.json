@@ -3,7 +3,7 @@
     "soucer.fixAll.eslint": "explicit"
   },
   "editor.formatOnSave": true,
-  "tailwindCSS.classFunctions": ["cn", "cva"],
+  "tailwindCSS.classFunctions": ["cn", "tv"],
   "tailwindCSS.classAttributes": ["className", "classNames"],
   "editor.quickSuggestions": {
     "strings": "on"
