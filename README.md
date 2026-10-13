@@ -83,6 +83,19 @@ src/
 `_app` e `_pages` têm prefixo `_` para não colidirem com as convenções `app/` e `pages/`
 do Next.js.
 
+As camadas `widgets`, `features` e `entities` começam vazias e devem ser preenchidas
+conforme o projeto cresce:
+
+- **`widgets`**: blocos de UI grandes e autossuficientes que compõem uma página (header,
+  sidebar, feed...). Combinam `features`, `entities` e `shared`. Cada slice expõe sua API
+  pública em `src/widgets/<slice>/index.ts`.
+- **`features`**: interações do usuário que entregam valor de negócio (login, adicionar ao
+  carrinho, filtrar lista...). Usam `entities` e `shared`. Cada slice expõe sua API
+  pública em `src/features/<slice>/index.ts`.
+- **`entities`**: entidades de negócio do domínio (user, product, order...): tipos,
+  schemas, chamadas de API e componentes de exibição. Usam apenas `shared`. Cada slice
+  expõe sua API pública em `src/entities/<slice>/index.ts`.
+
 Regras do FSD (verificadas pelo ESLint via `no-restricted-imports`, em
 `eslint.config.ts`):
 
