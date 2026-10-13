@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/nextjs-vite'
 
-import { Button } from '~/components/ui/button'
+import { Button } from '~/shared/ui/button'
 
 export default {
   title: 'UI/Button',

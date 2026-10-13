@@ -1,10 +1,10 @@
-import { devError, devLog, devWarn } from '~/utils/log'
+import { devError, devLog, devWarn } from '~/shared/lib/log'
 
 const { mockedEnv } = vi.hoisted(() => ({
   mockedEnv: { NODE_ENV: 'test' as 'development' | 'test' | 'production' },
 }))
 
-vi.mock('~/config/env', () => ({ env: mockedEnv }))
+vi.mock('~/shared/config/env', () => ({ env: mockedEnv }))
 
 describe('development logging utilities', () => {
   beforeEach(() => {

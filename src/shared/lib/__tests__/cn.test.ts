@@ -1,4 +1,4 @@
-import { cn } from '~/utils/cn'
+import { cn } from '~/shared/lib/cn'
 
 describe('cn', () => {
   it('combines class names', () => {

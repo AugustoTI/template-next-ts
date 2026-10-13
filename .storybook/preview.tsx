@@ -2,7 +2,7 @@ import { withThemeByClassName } from '@storybook/addon-themes'
 import { type Preview } from '@storybook/nextjs-vite'
 import { mswLoader } from 'msw-storybook-addon/csf3'
 
-import '../src/styles/global.css'
+import '../src/_app/styles/global.css'
 
 const preview: Preview = {
   loaders: [mswLoader()],

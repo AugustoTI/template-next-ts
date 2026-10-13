@@ -1,4 +1,4 @@
-import { cn } from '~/utils/cn'
+import { cn } from '~/shared/lib/cn'
 
 function PlaceholderContainer({ className, ...props }: React.ComponentProps<'div'>) {
   return (

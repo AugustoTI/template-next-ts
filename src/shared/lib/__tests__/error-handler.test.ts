@@ -1,4 +1,4 @@
-import { errorHandler, errorHandlerAsync } from '~/utils/error-handler'
+import { errorHandler, errorHandlerAsync } from '~/shared/lib/error-handler'
 
 describe('errorHandler', () => {
   it('returns the result and a null error when the function succeeds', () => {

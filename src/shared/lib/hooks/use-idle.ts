@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { throttle } from '~/utils/throttle'
+import { throttle } from '~/shared/lib/throttle'
 
 export function useIdle(ms = 1000 * 60) {
   const [idle, setIdle] = React.useState(false)

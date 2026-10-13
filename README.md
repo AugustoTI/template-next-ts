@@ -42,7 +42,7 @@ pnpm dev            # inicia o servidor de desenvolvimento (http://localhost:300
 pnpm dev                  # servidor de desenvolvimento
 pnpm build                # build de produção
 pnpm start                # sobe o build de produção
-pnpm lint                 # ESLint em src/ (--fix, --max-warnings=0)
+pnpm lint                 # ESLint (--fix, --max-warnings=0)
 pnpm format               # Prettier (write + check)
 pnpm test                 # roda os testes com Vitest
 pnpm test:watch           # Vitest em modo watch
@@ -59,43 +59,73 @@ pnpm exec tsc
 
 ## Estrutura do projeto
 
+O projeto segue o [Feature-Sliced Design (FSD)](https://feature-sliced.design). A pasta
+`app/` na raiz é usada apenas pelo roteador do Next.js; o código da aplicação vive em
+`src/`, organizado em camadas:
+
 ```text
+app/                  # roteamento do Next.js (layouts e page.tsx apenas re-exportam)
 src/
-├── app/              # rotas e layouts do App Router
-├── components/
-│   └── ui/           # primitivos de UI (shadcn/ui + @base-ui/react + CVA)
-├── config/
-│   └── env.ts        # validação de variáveis de ambiente (Zod + t3-env)
-├── hooks/            # hooks React reutilizáveis (debounce, throttle, pagination, idle...)
-├── styles/
-│   └── global.css    # entrada do Tailwind v4 e variáveis de tema
-├── utils/            # helpers agnósticos de framework (cn, error-handler, log, wait...)
-├── __tests__/        # testes Vitest (ex.: __tests__/button.spec.tsx)
-└── stories/          # stories do Storybook (ex.: stories/ui/button.stories.tsx)
+├── _app/             # camada app: providers, estilos globais e fontes
+│   ├── providers/
+│   └── styles/       # global.css (entrada do Tailwind v4) e fonts.ts
+├── _pages/           # camada pages: uma slice por página (ex.: _pages/home)
+├── widgets/          # blocos de UI grandes que compõem páginas
+├── features/         # interações do usuário com valor de negócio
+├── entities/         # entidades de negócio (user, product...)
+└── shared/           # código reutilizável sem regra de negócio
+    ├── config/       # env.ts (validação de variáveis de ambiente com Zod + t3-env)
+    ├── lib/          # helpers (cn, error-handler, log, wait...) e testes em __tests__/
+    │   └── hooks/    # hooks React reutilizáveis (debounce, throttle, pagination, idle...)
+    └── ui/           # primitivos de UI (shadcn/ui + @base-ui/react + CVA) e stories
+```
+
+`_app` e `_pages` têm prefixo `_` para não colidirem com as convenções `app/` e `pages/`
+do Next.js.
+
+Regras do FSD (verificadas pelo ESLint via `no-restricted-imports`, em
+`eslint.config.ts`):
+
+- Uma camada só importa das camadas **abaixo** dela: `_app` → `_pages` → `widgets` →
+  `features` → `entities` → `shared`. A pasta `app/` pode importar de qualquer camada.
+- Slices da mesma camada não importam umas das outras (ex.: `features/auth` não importa
+  `features/cart`).
+- Cada slice expõe uma API pública em `index.ts`, e quem está de fora importa só por ela:
+  `~/entities/user`, nunca `~/entities/user/ui/user-card`.
+- Dentro de uma slice, use imports relativos; entre camadas, use o alias `~/...`.
+- Segmentos comuns dentro de uma slice: `ui/`, `model/`, `api/`, `lib/`, `config/`.
+
+Exemplo de página:
+
+```text
+src/_pages/home/
+├── index.ts          # export { HomePage } from './ui/home-page'
+└── ui/
+    └── home-page.tsx
+app/page.tsx          # import { HomePage } from '~/_pages/home'; export default HomePage
 ```
 
 Principais pontos de extensão:
 
-- **Alias de import**: use sempre `~/...` (mapeado para `src/*`), nunca caminhos relativos
-  entre pastas de topo.
+- **Alias de import**: use sempre `~/...` (mapeado para `src/*`) entre camadas.
 - **Novos componentes de UI**: adicione via CLI do `shadcn` (`components.json` já está
-  configurado com o alias `~/components/ui`, base color `zinc` e ícones do `react-icons`),
-  em vez de criar a estrutura manualmente.
-- **Variáveis de ambiente**: declare em `src/config/env.ts` (client/server/shared) — nunca
-  leia `process.env` diretamente no restante do código.
-- **Logs de desenvolvimento**: use `devLog`/`devWarn`/`devError` de `src/utils/log.ts` em
-  vez de `console.*` (só logam em `NODE_ENV=development`).
+  configurado com os aliases `~/shared/ui`, `~/shared/lib` e `~/shared/lib/hooks`, base
+  color `zinc` e ícones do `react-icons`), em vez de criar a estrutura manualmente.
+- **Variáveis de ambiente**: declare em `src/shared/config/env.ts` (client/server/shared)
+  — nunca leia `process.env` diretamente no restante do código.
+- **Logs de desenvolvimento**: use `devLog`/`devWarn`/`devError` de
+  `src/shared/lib/log.ts` em vez de `console.*` (só logam em `NODE_ENV=development`).
 - **Tratamento de erros**: `errorHandler`/`errorHandlerAsync`
-  (`src/utils/error-handler.ts`) retornam tuplas `[data, error]` em vez de lançar exceção
-  — prefira esse padrão em vez de `try/catch` nos pontos que os consomem.
+  (`src/shared/lib/error-handler.ts`) retornam tuplas `[data, error]` em vez de lançar
+  exceção — prefira esse padrão em vez de `try/catch` nos pontos que os consomem.
 
 ## Estilização e temas
 
 - Não existe `tailwind.config.*` — a configuração do Tailwind v4 vive em
-  `src/styles/global.css` e `components.json`.
+  `src/_app/styles/global.css` e `components.json`.
 - O tema é fornecido pelo `@wrksz/themes` (`ThemeProvider` configurado em
-  `src/app/layout.tsx`, com suporte a modo claro/escuro/sistema).
-- Componentes seguem o padrão `data-slot` + variantes (veja `src/components/ui/button.tsx`
+  `src/_app/providers/index.tsx`, com suporte a modo claro/escuro/sistema).
+- Componentes seguem o padrão `data-slot` + variantes (veja `src/shared/ui/button.tsx`
   como referência de variantes/tamanhos).
 
 ## Qualidade e Git hooks
@@ -120,8 +150,8 @@ falharem — mantenha essas checagens passando localmente em vez de usar `--no-v
 - `@testing-library/react`, `@testing-library/dom` e `@testing-library/user-event` para
   testes de componentes; `msw` e `msw-storybook-addon` para mockar requisições em testes e
   no Storybook.
-- Exemplo em `src/__tests__/button.spec.tsx` — novos arquivos podem seguir o padrão
-  `*.spec.ts(x)` em `src/__tests__/`.
+- Exemplos em `src/shared/lib/__tests__/` — coloque os testes em uma pasta `__tests__/` ao
+  lado do código testado, com o padrão `*.test.ts(x)`.
 
 ## Storybook
 
@@ -134,8 +164,8 @@ a11y, docs, themes e `msw-storybook-addon`.
 - Sem ponto e vírgula, aspas simples, vírgula final em tudo, largura de linha 90
   (Prettier).
 - Ordem de imports é automática (plugin `@ianvs/prettier-plugin-sort-imports`): React →
-  Next → `types` → `~/types` → `~/configs` → `~/i18n` → `~/lib` → `~/utils` → `~/actions`
-  → `~/hooks` → `~/components/ui` → `~/components` → `~/assets` → imports relativos.
+  Next → `types` → `~/_app` → `~/_pages` → `~/widgets` → `~/features` → `~/entities` →
+  `~/shared` → imports relativos.
 - Variáveis/argumentos/erros de catch não utilizados devem ser prefixados com `_`
   (permitido pelo ESLint).
 - Conteúdo/copy da aplicação está em **pt-BR** — mantenha esse padrão ao adicionar novas

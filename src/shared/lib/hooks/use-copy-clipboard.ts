@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { errorHandlerAsync } from '~/utils/error-handler'
+import { errorHandlerAsync } from '~/shared/lib/error-handler'
 
 type CopiedValue = string | null
 type CopyFn = (text: string) => Promise<boolean>

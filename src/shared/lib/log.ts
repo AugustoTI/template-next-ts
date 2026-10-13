@@ -1,5 +1,6 @@
-import { env } from '~/config/env'
 import dayjs from 'dayjs'
+
+import { env } from '~/shared/config/env'
 
 function devConsole(method: (...data: unknown[]) => void, ...args: unknown[]) {
   if (env.NODE_ENV === 'development') {

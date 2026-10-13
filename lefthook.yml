@@ -3,7 +3,7 @@ pre-commit:
   jobs:
     - name: running-eslint
       glob: '*.{ts,tsx,mts,cts}'
-      run: pnpm lint:base src
+      run: pnpm lint:base src app
       stage_fixed: true
 
     - name: running-prettier
