@@ -38,6 +38,7 @@ The Tailwind CSS examples are written for Tailwind CSS v4. If `package.json` use
 - [v1.6.0](https://base-ui.com/react/overview/releases/v1-6-0.md): v1.6.0 release notes. Jun 18, 2026.
 - [v1.7.0](https://base-ui.com/react/overview/releases/v1-7-0.md): v1.7.0 release notes. Aug 4, 2026.
 - [v1.8.0](https://base-ui.com/react/overview/releases/v1-8-0.md): v1.8.0 release notes. Sep 4, 2026.
+- [v1.9.0](https://base-ui.com/react/overview/releases/v1-9-0.md): v1.9.0 release notes. Oct 9, 2026.
 
 ## Handbook
 
@@ -75,7 +76,7 @@ The Tailwind CSS examples are written for Tailwind CSS v4. If `package.json` use
 - [Popover](https://base-ui.com/react/components/popover.md): A high-quality, unstyled React popover component that displays an accessible popup anchored to a button.
 - [Preview Card](https://base-ui.com/react/components/preview-card.md): A high-quality, unstyled React preview card component for a link that shows a destination preview without interrupting keyboard or screen reader navigation.
 - [Progress](https://base-ui.com/react/components/progress.md): A high-quality, unstyled React progress bar component that displays the status of a task that takes a long time.
-- [Radio](https://base-ui.com/react/components/radio.md): A high-quality, unstyled React radio button component that is easy to style.
+- [Radio Group](https://base-ui.com/react/components/radio-group.md): A high-quality, unstyled React radio group component that provides shared state to a series of radio buttons.
 - [Scroll Area](https://base-ui.com/react/components/scroll-area.md): A high-quality, unstyled React scroll area that provides a native scroll container with custom scrollbars.
 - [Select](https://base-ui.com/react/components/select.md): A high-quality, unstyled React select component for choosing a predefined value in a dropdown menu.
 - [Separator](https://base-ui.com/react/components/separator.md): A high-quality, unstyled React separator component that is accessible to screen readers.
@@ -94,3 +95,17 @@ The Tailwind CSS examples are written for Tailwind CSS v4. If `package.json` use
 - [Direction Provider](https://base-ui.com/react/utils/direction-provider.md): A direction provider component that enables RTL behavior for Base UI components.
 - [mergeProps](https://base-ui.com/react/utils/merge-props.md): A utility to merge multiple sets of React props, handling event handlers, className, and style props intelligently.
 - [useRender](https://base-ui.com/react/utils/use-render.md): Hook for enabling a render prop in custom components.
+
+# Feature-Sliced Design
+
+> Architectural methodology for frontend projects
+
+## Documentation Sets
+
+- [Abridged documentation](https://feature-sliced.design/llms-small.txt): a compact version of the documentation for Feature-Sliced Design, with non-essential content removed
+- [Complete documentation](https://feature-sliced.design/llms-full.txt): the full documentation for Feature-Sliced Design
+
+## Notes
+
+- The complete documentation includes all content from the official documentation
+- The content is automatically generated from the same source as the official documentation
